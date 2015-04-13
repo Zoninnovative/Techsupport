@@ -1,0 +1,283 @@
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll.config
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\MvcCheckBoxList.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\WebGrease.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll.config
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Web.Infrastructure.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\MvcCheckBoxList.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Owin.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\WebGrease.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.dll
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.pdb
+E:\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
+E:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
+E:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.dll
+E:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll.config
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Web.Infrastructure.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\MvcCheckBoxList.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Owin.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\WebGrease.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.dll
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.pdb
+G:\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
+G:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
+G:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.dll
+G:\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll.config
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.Mvc.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Owin.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\WebGrease.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Net.Http.Formatting.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.WebHost.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Helpers.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Mvc.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Optimization.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Razor.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing System.API.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Antlr3.Runtime.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Newtonsoft.Json.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\EntityFramework.SqlServer.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\obj\Release\Ticketing System.Mvc.pdb
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\CsQuery.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\itextsharp.dll
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\CsQuery.xml
+C:\Users\ZIIS6017\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing System.Mvc\bin\itextsharp.xml

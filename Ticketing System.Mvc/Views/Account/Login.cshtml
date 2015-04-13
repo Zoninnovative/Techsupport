@@ -1,0 +1,32 @@
+﻿@model Ticketing_System.Mvc.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+@*<script src="~/Scripts/validation.js"></script>
+<script src="~/Scripts/Validations.js"></script>*@
+<link href="~/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+ 
+<link href="~/Login Css/Style.css" rel="stylesheet" />
+
+<div class="wrapper">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    { 
+    <div class="form-signin">
+        <h3 class="form-signin-heading text-center">Login Here</h3>
+        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control col-md-4" } })<br />
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })<br />
+        @*<input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />*@
+        @*<input type="password" class="form-control" name="password" placeholder="Password" required="" />*@
+        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control col-md-4" } })<br />
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })<br />
+        @Html.ValidationSummary("", new {@class="text-danger text-center" })
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button><hr />
+        <div class="text-center">   @Html.ActionLink("Forgot Password", "ForgotPassword", null, new { @class = "text-center" })            </div>
+    </div>
+    }}
+</div>

@@ -1,0 +1,144 @@
+﻿@model Ticketing_System.Mvc.Models.CreateProjectModel
+
+@{
+
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/PageLevel Scripts/Proejct.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+ 
+<div id="page-wrapper">
+    <div class="col-lg-12">
+        <h5 class="pull-right"> Dashboard - > Projects -> Manage Project</h5>
+    </div>
+    <script src="~/Scripts/validation.js"></script>
+    <script src="~/Scripts/Validations.js"></script>
+    <div class="row">
+        <div class="col-lg-12">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Manage Project</h4>
+                    <hr />
+                    @Html.HiddenFor(model=>model.ID)
+                    @Html.HiddenFor(model=>model.CreatedBy)
+                    @Html.HiddenFor(model => model.UserIds)
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.TextAreaFor(model => model.Description,6,47, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Short Name</label>
+                            @*@Html.LabelFor(model => model.ShortName, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.DisplayFor(model => model.ShortName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ShortName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.Duration, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Project Manager</label>
+                            @*@Html.LabelFor(model => model.ProjectManager, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.PManagerID, Model.ProjectManagerDDl, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.PManagerID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Client, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.ClientID, Model.ClientsDDl, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ClientID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.HiddenFor(model=>model.ShortName)
+                            <label class="control-label col-md-3">short Name</label>
+                            @*@Html.LabelFor(model => model.SignUpDate, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.SignUpDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.SignUpDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Start Date</label>
+                            @*@Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Proposed EndDate</label>
+                            @*@Html.LabelFor(model => model.ProposedEndDate, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ProposedEndDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ProposedEndDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Users Lists</label>
+                            @*@Html.LabelFor(model => model.UsersList, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @foreach (SelectListItem si in Model.UsersList)
+                                {
+                                    
+                                    @Html.CheckBox(@si.Text, si.Selected, new { userid = @si.Value })@si.Text<br />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Update" class="btn btn-info btn-block" />
+                                @if (ViewBag.Message != null)
+                                {
+                                    <label class="text-info">@ViewBag.Message</label>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $('#SignUpDate,#StartDate,#ProposedEndDate').datepicker({
+            format: "mm/dd/yyyy"
+        });
+    });
+</script>

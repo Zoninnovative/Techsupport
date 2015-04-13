@@ -1,0 +1,180 @@
+﻿@model Ticketing_System.Core.UserDashboardDTO
+@{
+    ViewBag.Title = "User Dashboard";<!--User-->
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<!-- DataTables CSS -->
+<link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+<!-- DataTables Responsive CSS -->
+<link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/PageLevel%20Scripts/UserDashboard.js"></script>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h5 class="page-header">Info Gallery</h5>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Assigned to Me</div>
+                <div class="panel-body">
+
+
+
+
+                    <div class="dataTable_wrapper">
+                        <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
+                            <thead>
+                            <th>
+                                Task ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                AssignedDate
+                            </th>
+                            <th>
+                                Priority
+                            </th>
+
+                            <th>AssignedTo</th>
+                            <th></th>
+                            </thead>
+
+                            @foreach (var item in Model.AssignedToMe)
+                            {
+                                <tr>
+                                    <td>
+
+                                        @item.TaskDisplayName
+                                    </td>
+                                    <td>
+
+                                        @item.Title
+                                    </td>
+                                    <td>
+                                        @item.Description
+                                    </td>
+                                    <td>
+                                        @item.AssigndedDate
+                                    </td>
+                                    <td>
+                                        @item.PriorityName
+                                    </td>
+
+                                    <td>
+                                        @item.AssignedToName
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", "Tickets", new { ticketid = item.ID }, new { @class = "btn btn-info btn-block" })
+                                        @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">Activity Log</div>
+                <div class="panel-body">
+
+                    @{
+
+                        if (Model.ActivityDTO != null)
+                        {
+
+                            <div id="divactivity">
+                                @foreach (var data in Model.ActivityDTO)
+                         {
+                         if (data.Comments !=null)
+                         {
+                        <div class="well">
+                            <li><b>  @data.CreatedBy  </b> has commented on the  task   <a href="~/Tickets/edit?ticketid=@data.TaskID">data.DisplayName</a> .  @data.Comments   <span class="pull-right">-@data.CreatedDate</span> </li>
+                        </div>
+                }
+
+                else if (data.N_Title != null && data.O_Title == null && data.N_Description != null && data.O_Description == null)
+                {
+                        <div class="well">
+                            <li>  <b> @data.CreatedBy </b> has been Created a task <a href="~/Tickets/edit?ticketid=@data.TaskID">@data.DisplayName</a>. ( @data.N_Description)  <span class="pull-right">-@data.CreatedDate</span> </li>
+                        </div>
+                }
+                else if (data.N_Task_Statuus != null || data.O_Task_Status != null)
+                {
+                        <div class="well">
+                            <li>
+                                <b>  @data.CreatedBy </b> has beed updated the status of Task <a href="~/Tickets/edit?ticketid=@data.TaskID">data.DisplayName</a> from
+
+                                <b class="text-warning">  @data.O_Task_Status</b>
+
+                                to
+
+
+
+                                <b class="text-success">   @data.N_Task_Statuus</b>  <span class="pull-right">-@data.CreatedDate</span>
+                            </li>
+                        </div>
+                }
+            }
+
+
+
+                            </div>
+                            if (Model.ActivityDTO.Count() >= 0)
+                            {
+
+                                <div class="row">
+
+                                    <a href="#" class="fa fa-angle-left pull-left" id="previousactivities" pageindex="0"> Previous</a>
+
+                                    <a href="#" class="fa fa-angle-right pull-right" id="nextactivities" pageindex="0"> Next</a>
+
+                                </div>
+                            }
+
+                        }
+
+                        else
+                        {
+                            <span> No Actitivies Found</span>
+                        }
+                    }
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <!-- /.row -->
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+
+        });
+    </script>

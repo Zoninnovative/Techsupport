@@ -1,0 +1,16 @@
+﻿@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string role=Ticketing_System.Mvc.RoleHelper.GetUserRole();
+    if (role == "Administrator")
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else if (role == "Developer" || role == "Client")
+    {
+        Layout = "~/Views/Shared/_UserLayout.cshtml";
+    }
+
+    
+}

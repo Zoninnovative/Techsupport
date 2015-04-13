@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketing_System.API", "Ticketing System.API\Ticketing_System.API.csproj", "{F1AC4D18-F6EC-45EA-8095-FDA921C3F31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketing_System.Core", "Ticketing_System.Core\Ticketing_System.Core.csproj", "{2FB876F2-1EA9-47CB-81BA-8BE79BA96658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketing_System.Repositoy", "Ticketing_System.Repositoy\Ticketing_System.Repositoy.csproj", "{88B6102B-920D-49F7-94E2-3AA7941FB0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketing_System.Mvc", "Ticketing System.Mvc\Ticketing_System.Mvc.csproj", "{1E416C67-5A98-4CAD-AB76-60A8019B2307}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1AC4D18-F6EC-45EA-8095-FDA921C3F31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AC4D18-F6EC-45EA-8095-FDA921C3F31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AC4D18-F6EC-45EA-8095-FDA921C3F31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AC4D18-F6EC-45EA-8095-FDA921C3F31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB876F2-1EA9-47CB-81BA-8BE79BA96658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB876F2-1EA9-47CB-81BA-8BE79BA96658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB876F2-1EA9-47CB-81BA-8BE79BA96658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB876F2-1EA9-47CB-81BA-8BE79BA96658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B6102B-920D-49F7-94E2-3AA7941FB0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B6102B-920D-49F7-94E2-3AA7941FB0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B6102B-920D-49F7-94E2-3AA7941FB0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B6102B-920D-49F7-94E2-3AA7941FB0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E416C67-5A98-4CAD-AB76-60A8019B2307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E416C67-5A98-4CAD-AB76-60A8019B2307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E416C67-5A98-4CAD-AB76-60A8019B2307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E416C67-5A98-4CAD-AB76-60A8019B2307}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_Zon_TechSupportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Discriminator" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="Mst_Project" Relationship="Self.FK_Mst_Project_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_Project" />
+    <NavigationProperty Name="Mst_Project1" Relationship="Self.FK_Mst_Project_AspNetUsers1" FromRole="AspNetUsers" ToRole="Mst_Project" />
+    <NavigationProperty Name="Mst_Project_Documents" Relationship="Self.FK_Mst_Project_Documents_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_Project_Documents" />
+    <NavigationProperty Name="Mst_ProjectUsers" Relationship="Self.FK_Mst_ProjectUsers_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_ProjectUsers" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Mst_Task_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_Task" />
+    <NavigationProperty Name="Mst_Task1" Relationship="Self.FK_Mst_Task_AspNetUsers1" FromRole="AspNetUsers" ToRole="Mst_Task" />
+    <NavigationProperty Name="Mst_Project2" Relationship="Self.FK_Project_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_Project" />
+    <NavigationProperty Name="Mst_Project3" Relationship="Self.FK_Project_AspNetUsers1" FromRole="AspNetUsers" ToRole="Mst_Project" />
+    <NavigationProperty Name="Mst_Task2" Relationship="Self.FK_Table_2_AspNetUsers" FromRole="AspNetUsers" ToRole="Mst_Task" />
+    <NavigationProperty Name="Mst_Task3" Relationship="Self.FK_Table_2_AspNetUsers1" FromRole="AspNetUsers" ToRole="Mst_Task" />
+    <NavigationProperty Name="Trans_Ticket" Relationship="Self.FK_Trans_Ticket_AspNetUsers" FromRole="AspNetUsers" ToRole="Trans_Ticket" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="Mst_Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PManagerID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="SignUpDate" Type="DateTime" Precision="7" />
+    <Property Name="StartDate" Type="DateTime" Precision="7" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="ProposedEndDate" Type="DateTime" Precision="7" />
+    <Property Name="ActualEndDate" Type="DateTime" Precision="7" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Mst_Project_AspNetUsers" FromRole="Mst_Project" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser1" Relationship="Self.FK_Mst_Project_AspNetUsers1" FromRole="Mst_Project" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser2" Relationship="Self.FK_Project_AspNetUsers" FromRole="Mst_Project" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser3" Relationship="Self.FK_Project_AspNetUsers1" FromRole="Mst_Project" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Mst_Project_Documents" Relationship="Self.FK_Mst_Project_Documents_Mst_Project" FromRole="Mst_Project" ToRole="Mst_Project_Documents" />
+    <NavigationProperty Name="Mst_ProjectUsers" Relationship="Self.FK_Mst_ProjectUsers_Mst_ProjectUsers" FromRole="Mst_Project" ToRole="Mst_ProjectUsers" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Mst_Task_Mst_Project" FromRole="Mst_Project" ToRole="Mst_Task" />
+  </EntityType>
+  <EntityType Name="Mst_Project_Documents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="UploadedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UploadedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Mst_Project_Documents_AspNetUsers" FromRole="Mst_Project_Documents" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Mst_Project" Relationship="Self.FK_Mst_Project_Documents_Mst_Project" FromRole="Mst_Project_Documents" ToRole="Mst_Project" />
+  </EntityType>
+  <EntityType Name="Mst_ProjectUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Mst_ProjectUsers_AspNetUsers" FromRole="Mst_ProjectUsers" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Mst_Project" Relationship="Self.FK_Mst_ProjectUsers_Mst_ProjectUsers" FromRole="Mst_ProjectUsers" ToRole="Mst_Project" />
+  </EntityType>
+  <EntityType Name="Mst_Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TaskDisplayName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RefereedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DueDate" Type="DateTime" Precision="7" />
+    <Property Name="AssigndedDate" Type="DateTime" Precision="7" />
+    <Property Name="PriorityID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="Task_Status" Type="Int32" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Mst_Task_AspNetUsers" FromRole="Mst_Task" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser1" Relationship="Self.FK_Mst_Task_AspNetUsers1" FromRole="Mst_Task" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser2" Relationship="Self.FK_Table_2_AspNetUsers" FromRole="Mst_Task" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser3" Relationship="Self.FK_Table_2_AspNetUsers1" FromRole="Mst_Task" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Mst_Project" Relationship="Self.FK_Mst_Task_Mst_Project" FromRole="Mst_Task" ToRole="Mst_Project" />
+    <NavigationProperty Name="Mst_TaskStatus" Relationship="Self.FK_Mst_Task_Mst_TaskStatus" FromRole="Mst_Task" ToRole="Mst_TaskStatus" />
+    <NavigationProperty Name="Mst_TaskPriority" Relationship="Self.FK_Table_2_Mst_Priority" FromRole="Mst_Task" ToRole="Mst_TaskPriority" />
+    <NavigationProperty Name="Mst_TaskType" Relationship="Self.FK_Table_2_Mst_TaskType" FromRole="Mst_Task" ToRole="Mst_TaskType" />
+    <NavigationProperty Name="Trans_Ticket" Relationship="Self.FK_Trans_Ticket_Mst_Task" FromRole="Mst_Task" ToRole="Trans_Ticket" />
+    <Property Name="Attachment1_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment1_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment2_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment2_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment3_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment3_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Mst_TaskPriority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PriorityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Table_2_Mst_Priority" FromRole="Mst_TaskPriority" ToRole="Mst_Task" />
+  </EntityType>
+  <EntityType Name="Mst_TaskStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Task_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Mst_Task_Mst_TaskStatus" FromRole="Mst_TaskStatus" ToRole="Mst_Task" />
+  </EntityType>
+  <EntityType Name="Mst_TaskType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Table_2_Mst_TaskType" FromRole="Mst_TaskType" ToRole="Mst_Task" />
+  </EntityType>
+  <EntityType Name="Trans_Ticket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskID" Type="Int32" />
+    <Property Name="DisplayName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AttachmentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AttachmentPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="7" />
+    <Property Name="O_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="N_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="O_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="N_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="O_AssignedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="N_AssignedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="O_RefereedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="N_RefereedTo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="O_PriorityID" Type="Int32" />
+    <Property Name="N_PriorityID" Type="Int32" />
+    <Property Name="O_TypeID" Type="Int32" />
+    <Property Name="N_TypeID" Type="Int32" />
+    <Property Name="O_Task_Status" Type="Int32" />
+    <Property Name="N_Task_Statuus" Type="Int32" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Trans_Ticket_AspNetUsers" FromRole="Trans_Ticket" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Mst_Task" Relationship="Self.FK_Trans_Ticket_Mst_Task" FromRole="Trans_Ticket" ToRole="Mst_Task" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Project_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Project">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Project_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Project">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Project_Documents_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Project_Documents" Type="Self.Mst_Project_Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Project_Documents">
+        <PropertyRef Name="UploadedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_ProjectUsers_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_ProjectUsers" Type="Self.Mst_ProjectUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_ProjectUsers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Task_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Task_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Project">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Project">
+        <PropertyRef Name="PManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_2_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="AssignedTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_2_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="RefereedTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trans_Ticket_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="Trans_Ticket" Type="Self.Trans_Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Trans_Ticket">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Project_Documents_Mst_Project">
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="0..1" />
+    <End Role="Mst_Project_Documents" Type="Self.Mst_Project_Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_Project_Documents">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_ProjectUsers_Mst_ProjectUsers">
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="0..1" />
+    <End Role="Mst_ProjectUsers" Type="Self.Mst_ProjectUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_ProjectUsers">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Task_Mst_Project">
+    <End Role="Mst_Project" Type="Self.Mst_Project" Multiplicity="1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mst_Task_Mst_TaskStatus">
+    <End Role="Mst_TaskStatus" Type="Self.Mst_TaskStatus" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_TaskStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="Task_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_2_Mst_Priority">
+    <End Role="Mst_TaskPriority" Type="Self.Mst_TaskPriority" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_TaskPriority">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="PriorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_2_Mst_TaskType">
+    <End Role="Mst_TaskType" Type="Self.Mst_TaskType" Multiplicity="0..1" />
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_TaskType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mst_Task">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trans_Ticket_Mst_Task">
+    <End Role="Mst_Task" Type="Self.Mst_Task" Multiplicity="0..1" />
+    <End Role="Trans_Ticket" Type="Self.Trans_Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trans_Ticket">
+        <PropertyRef Name="TaskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="db_Zon_TechSupportdb_Zon_TechSupportEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Mst_Project" EntityType="Self.Mst_Project" />
+    <EntitySet Name="Mst_Project_Documents" EntityType="Self.Mst_Project_Documents" />
+    <EntitySet Name="Mst_ProjectUsers" EntityType="Self.Mst_ProjectUsers" />
+    <EntitySet Name="Mst_Task" EntityType="Self.Mst_Task" />
+    <EntitySet Name="Mst_TaskPriority" EntityType="Self.Mst_TaskPriority" />
+    <EntitySet Name="Mst_TaskStatus" EntityType="Self.Mst_TaskStatus" />
+    <EntitySet Name="Mst_TaskType" EntityType="Self.Mst_TaskType" />
+    <EntitySet Name="Trans_Ticket" EntityType="Self.Trans_Ticket" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Project_AspNetUsers" Association="Self.FK_Mst_Project_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Project_AspNetUsers1" Association="Self.FK_Mst_Project_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Project_Documents_AspNetUsers" Association="Self.FK_Mst_Project_Documents_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Project_Documents" EntitySet="Mst_Project_Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_ProjectUsers_AspNetUsers" Association="Self.FK_Mst_ProjectUsers_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_ProjectUsers" EntitySet="Mst_ProjectUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Task_AspNetUsers" Association="Self.FK_Mst_Task_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Task_AspNetUsers1" Association="Self.FK_Mst_Task_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_AspNetUsers" Association="Self.FK_Project_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_AspNetUsers1" Association="Self.FK_Project_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_2_AspNetUsers" Association="Self.FK_Table_2_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_2_AspNetUsers1" Association="Self.FK_Table_2_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trans_Ticket_AspNetUsers" Association="Self.FK_Trans_Ticket_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Trans_Ticket" EntitySet="Trans_Ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Project_Documents_Mst_Project" Association="Self.FK_Mst_Project_Documents_Mst_Project">
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+      <End Role="Mst_Project_Documents" EntitySet="Mst_Project_Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_ProjectUsers_Mst_ProjectUsers" Association="Self.FK_Mst_ProjectUsers_Mst_ProjectUsers">
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+      <End Role="Mst_ProjectUsers" EntitySet="Mst_ProjectUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Task_Mst_Project" Association="Self.FK_Mst_Task_Mst_Project">
+      <End Role="Mst_Project" EntitySet="Mst_Project" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mst_Task_Mst_TaskStatus" Association="Self.FK_Mst_Task_Mst_TaskStatus">
+      <End Role="Mst_TaskStatus" EntitySet="Mst_TaskStatus" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_2_Mst_Priority" Association="Self.FK_Table_2_Mst_Priority">
+      <End Role="Mst_TaskPriority" EntitySet="Mst_TaskPriority" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_2_Mst_TaskType" Association="Self.FK_Table_2_Mst_TaskType">
+      <End Role="Mst_TaskType" EntitySet="Mst_TaskType" />
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trans_Ticket_Mst_Task" Association="Self.FK_Trans_Ticket_Mst_Task">
+      <End Role="Mst_Task" EntitySet="Mst_Task" />
+      <End Role="Trans_Ticket" EntitySet="Trans_Ticket" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

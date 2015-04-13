@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thunder.RazorPdf</name>
+    </assembly>
+    <members>
+        <member name="T:Thunder.RazorPdf.DocumentMargin">
+            <summary>
+                Page
+            </summary>
+        </member>
+        <member name="M:Thunder.RazorPdf.DocumentMargin.#ctor">
+            <summary>
+                Initializa new instance of class <see cref="T:Thunder.RazorPdf.DocumentMargin"/>
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentMargin.Top">
+            <summary>
+                Get or set top margin
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentMargin.Bottom">
+            <summary>
+                Get or set bottom margin
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentMargin.Left">
+            <summary>
+                Get or set left margin
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentMargin.Right">
+            <summary>
+                Get or set right margin
+            </summary>
+        </member>
+        <member name="T:Thunder.RazorPdf.DocumentSetting">
+            <summary>
+                Pdf settings
+            </summary>
+        </member>
+        <member name="M:Thunder.RazorPdf.DocumentSetting.#ctor">
+            <summary>
+                New instance of class <see cref="T:Thunder.RazorPdf.DocumentSetting"/>
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentSetting.PageSize">
+            <summary>
+                Get or set page size
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.DocumentSetting.Margin">
+            <summary>
+                Get or set margin of document
+            </summary>
+        </member>
+        <member name="T:Thunder.RazorPdf.PdfResult">
+            <summary>
+            Pdf result
+            </summary>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.#ctor(System.String)">
+            <summary>
+            New instance of class <see cref="T:Thunder.RazorPdf.PdfResult"/>
+            </summary>
+            <param name="viewName"></param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.#ctor(System.String,System.Object)">
+            <summary>
+            New instance of class <see cref="T:Thunder.RazorPdf.PdfResult"/>
+            </summary>
+            <param name="viewName">View Name</param>
+            <param name="model">Model</param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.#ctor(System.String,System.Object,System.String)">
+            <summary>
+            New instance of class <see cref="T:Thunder.RazorPdf.PdfResult"/>
+            </summary>
+            <param name="viewName">View Name</param>
+            <param name="model">Model</param>
+            <param name="fileName">File Name</param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.#ctor(System.String,System.Object,System.Boolean)">
+            <summary>
+            New instance of class <see cref="T:Thunder.RazorPdf.PdfResult"/>
+            </summary>
+            <param name="viewName">View Name</param>
+            <param name="model">Model</param>
+            <param name="download">Force download</param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.#ctor(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            New instance of class <see cref="T:Thunder.RazorPdf.PdfResult"/>
+            </summary>
+            <param name="viewName">View Name</param>
+            <param name="model">Model</param>
+            <param name="fileName">File Name</param>
+            <param name="download">Force download</param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            ExecuteResult
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.Format(System.Web.HttpContextBase)">
+            <summary>
+            Format html
+            </summary>
+            <param name="httpContext"></param>
+        </member>
+        <member name="M:Thunder.RazorPdf.PdfResult.RenderRazorViewToString(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Render razor view to string
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.Html">
+            <summary>
+            Get html
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.ViewName">
+            <summary>
+            Get view name
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.Model">
+            <summary>
+            Get model
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.FileName">
+            <summary>
+            Get file name
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.StyleSheets">
+            <summary>
+            Get or set style sheets
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.Settings">
+            <summary>
+            Get or set document setting
+            </summary>
+        </member>
+        <member name="P:Thunder.RazorPdf.PdfResult.Download">
+            <summary>
+            Get if force download
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>hiqpdf</id>
+    <version>8.10</version>
+    <title>HiQPdf HTML to PDF Converter</title>
+    <authors>HiQPdf Software</authors>
+    <owners>HiQPdf Software</owners>
+    <licenseUrl>http://www.hiqpdf.com/SoftwareLicenseAgreeement.aspx</licenseUrl>
+    <projectUrl>http://www.hiqpdf.com/</projectUrl>
+    <iconUrl>http://www.hiqpdf.com/images/HiQPdf_64x64.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The HiQPdf Library for .NET offers you a modern, simple, fast, flexible and powerful tool to create complex and stylish PDF documents in your applications with just a few lines of code.
+
+Using the high quality HTML to PDF conversion engine you can easily design a document in HTML with CSS3, JavaScript, SVG or Canvas and then convert it to PDF preserving the exact content and style.
+
+The HiQPdf Library for .NET offers you the fastest and the most precise HTML to PDF conversion tchnology to use in your Web and Desktop applications. The HTML to PDF Converter can convert to PDF any HTML document or URL that a modern browser can display, preserving all the CSS styles and executing all the JavaScript scripts found in the HTML document.
+
+Besides the common features a HTML to PDF Converter must have, the HiQPdf component has some unique features on the market like the support for web fonts in Web Open Font Format (WOFF), the ability to convert only a selected region of the HTML document or the possibility to overlap multiple HTML documents in the same PDF while preserving the transparent backgrounds and images from the HTML document.
+
+The HiQPdf HTML to PDF Converter can render HTML documents with last generation content like Scalar Vector Graphics, Canvas and CSS3 styles. The JavaScript engine is fast, can handle complex scripts and exposes in HTML page objects you can use to manually trigger conversion or to determine various information about converter during conversion.
+
+The HiQPdf HTML to PDF Converter can render HTML documents using Web Fonts in formats like Web Open Font Format (WOFF), TrueType or OpenType with TrueType Outlines. The Web Fonts offer a great flexibility to web designers to create special effects on text in a HTML document because they are not limited anymore to a small set of fonts installed on the client computers displaying the HTML document.</description>
+    <summary>The HiQPdf Library for .NET offers you a modern, simple, fast, flexible and powerful tool to create complex and stylish PDF documents in your applications with just a few lines of code.</summary>
+    <tags>HTML to PDF Converter</tags>
+  </metadata>
+</package>

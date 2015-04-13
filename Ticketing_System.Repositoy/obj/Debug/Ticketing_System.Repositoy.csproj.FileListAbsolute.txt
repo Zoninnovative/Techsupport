@@ -1,0 +1,107 @@
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll.config
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Owin.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.pdb
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
+C:\Users\Tulasiram\Documents\Visual Studio 2013\Projects\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll.config
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.pdb
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Owin.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.dll
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.xml
+E:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.pdb
+E:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache
+E:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
+E:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll.config
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.pdb
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Owin.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.dll
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.xml
+G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.pdb
+G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
+G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb
+G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll.config
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.pdb
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Owin.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.pdb
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb

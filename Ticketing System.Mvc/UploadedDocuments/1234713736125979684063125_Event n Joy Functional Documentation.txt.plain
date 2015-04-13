@@ -1,0 +1,112 @@
+ 
+
+1. Project Details
+
+ 1.1 Project Name : Event n Joy
+
+ 1.2 Document Authors : Tulasiram ,Sachin and Santhosh
+
+
+
+ 1.3 Document Version : v1.1
+
+ 1.4 Document Date : 16-03/2015
+
+
+
+
+2. Existing System Functional analysis : 
+
+
+                   In the existing system there is no integrated mechansim which acts as end to end repository to celebrate functions. Portals like p1,p2,p3 
+
+are providing minimal services to in this perspective.
+                      
+                      
+
+
+3. Proposed system Scope : 
+
+                      ->3.0 Abbrivations
+                      ->3.1 functional hall booking 
+                      ->3.2 band booking , 
+                      ->3.3 invitation cards ordering ,
+                      ->3.4 travels booking like (cabs , cars and buses),
+                      ->3.5 shoping malls details, (Low prioroty)
+                      ->3.6 makeup for bride and bridegroom 
+                      ->3.7 accomodation (like guest rooms for Guests)
+                      ->3.8 family trips 
+                      ->3.9 decoration items 
+                      ->3.10 Photograpy
+                      ->3.11 Catering and packages 
+                      ->3.12 Banners and print media advertisement 
+                      ->3.13 Entertainment (Archestra,DJ and so on)
+3.0  Abbrivations : 
+
+                    Vendors         -P1 {Owners,store owners,shopping mall owners etc}
+                    End users       -P2
+                    Admin           -P3
+                    Event Manager   -P4
+
+                    Add Review  on related sevice     - Review
+
+ 3.1 Invitation Cards module - M1: In this module we provide the below services to the user and press owners.
+      
+
+     3.1.1   Services to Owners(P1) :
+ 
+       3.1.1.1: Printing press owners can register themselves with the system
+       3.1.1.2 : They can upload Template designs  and their specifications like price ,example designs. 
+       3.1.1.3 : Press owners can update information related to prfile or templates and its specification at any time.
+
+     3.1.2    Services to End Users(P2) : 
+ 
+       3.1.2.1 P2 can search for Printing Presses (P1).
+       3.1.2.2 P2 can View Template Designs and Prices.
+       3.1.2.3 P2 can contact the specific P1 through the details given in the portal.
+       3.1.2.4 P2 can give review for a particular Press owner.
+
+
+ 3.2 Preist Module - M2: In this module we provide the following services.
+
+       3.2.1 Services to Preist(P1).
+ 
+       3.2.1.1 : Preist can register themselves with the system. 
+       3.2.1.2 : Updates his pricing and Experience details including previous events details at any time.
+
+       3.2.2 Services to End Users(P2).
+
+       3.2.2.1 : P2 can search for the Priests. 
+       3.2.2.2 : P2 can View reviews of the preists and can contact the priest in the given details.
+       3.2.2.3 : P2 can add review for a particular Preist.
+ 
+ 3.3 Function Hall Module - M3 : In this module we provide the following services.
+
+      3.3.1 Services to Function Hall Owners (P1)
+      
+       3.3.1.1 P1 can register themselves with the System.
+       3.3.1.2 P1 can upload content (videos,photos) related to his/her Function Hall. 
+       3.3.1.3 P1 can update his profile information at any time. 
+
+      3.3.2 Services tp End Users (P2).
+       
+       3.3.2.1 P2 can search for Function Halls based on (Location/Sq Feet/ Type(A/c or Non A/c).
+       3.3.2.2 P2 can view the images or videos related to each Function Hall.
+       3.3.2.3 P2 can contact the Function Hall owner on given details. 
+       3.3.2.4 Review
+
+ 3.4 Saloons and Makeup Artist Module -M4 : 
+
+      
+
+
+
+
+
+Milestones to be acheived : 
+
+
+
+difficulties : 
+
+

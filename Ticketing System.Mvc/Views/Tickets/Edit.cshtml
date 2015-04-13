@@ -1,0 +1,396 @@
+﻿@model Ticketing_System.Core.CreateTaskDTO
+@{
+}
+ 
+<script src="~/Scripts/validation.js"></script>
+<script src="~/Scripts/PageLevel Scripts/Tasks.js"></script>
+<link href="~/Content/Custom.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<div id="page-wrapper">
+    <div class="col-lg-12">
+        <h5 class="pull-right"> Dashboard - > Tickets ->Manage Ticket</h5>
+    </div>
+    <script src="~/Scripts/validation.js"></script>
+    <script src="~/Scripts/Validations.js"></script>
+    <div class="row">
+        <div class="col-lg-12">
+
+
+
+            @using (Html.BeginForm("Edit","Tickets", FormMethod.Post, new { id="editTaskForm" }))
+            {
+              @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Manage Ticket-@Model.TaskDisplayName</h4>
+                    <hr />
+                    <br />
+
+                    <div class="row well ">
+
+
+
+                        <div class="col-md-2">
+                            @{
+                if (Model.Task_Status == 1)
+                { 
+                                @Html.ActionLink("To Do", "UpdateTaskStatus", new { taskid = @Model.ID, status = 1 }, new { @class = "btn btn-success btn-block" })
+                }
+                else
+                {
+                                    @Html.ActionLink("To Do", "UpdateTaskStatus", new { taskid = @Model.ID, status = 1 }, new { @class = "btn btn-info btn-block" })
+
+                }
+}
+                            
+
+                        </div>
+                        <div class="col-md-2">
+
+                            @{
+                if (Model.Task_Status == 5)
+                {
+                     
+    @Html.ActionLink("Start Progress", "UpdateTaskStatus", new { taskid = @Model.ID, status = 5 }, new { @class = "btn btn-success btn-block" })
+                }
+                else
+                {
+              
+    @Html.ActionLink("Start Progress", "UpdateTaskStatus", new { taskid = @Model.ID, status = 5 }, new { @class = "btn btn-info btn-block" })
+
+                }
+}
+
+                        </div>
+                        <div class="col-md-2">
+                            @{
+                if (Model.Task_Status == 2)
+                {
+
+                    @Html.ActionLink("Done", "UpdateTaskStatus", new { taskid = @Model.ID, status = 2 }, new { @class = "btn btn-success btn-block" })
+
+                }
+                else
+                {
+
+                    @Html.ActionLink("Done", "UpdateTaskStatus", new { taskid = @Model.ID, status = 2 }, new { @class = "btn btn-info btn-block" })
+
+
+                }
+}
+                        </div>
+                        <div class="col-md-2">
+                         @{   if (Model.Task_Status == 4)
+                              {
+
+                            @Html.ActionLink("Re Open", "UpdateTaskStatus", new { taskid = @Model.ID, status = 4 }, new { @class = "btn btn-success btn-block" })
+
+
+                              }
+                              else
+                              {
+
+
+                            @Html.ActionLink("Re Open", "UpdateTaskStatus", new { taskid = @Model.ID, status = 4 }, new { @class = "btn btn-info btn-block" })
+
+
+                              }
+                            }
+
+                        </div>
+                        <div class="col-md-2">
+
+                            @{   if (Model.Task_Status == 3)
+                                 {
+ 
+
+    @Html.ActionLink("In Review", "UpdateTaskStatus", new { taskid = @Model.ID, status = 3 }, new { @class = "btn btn-success btn-block" })
+
+                                 }
+                                 else
+                                 {
+
+
+                                @Html.ActionLink("In Review", "UpdateTaskStatus", new { taskid = @Model.ID, status = 3 }, new { @class = "btn btn-info btn-block" })
+
+                                 }
+}
+
+                        </div>
+                    
+                    <div class="col-md-2">
+
+                        <a data-toggle="modal" data-id="ISBN" title="Post Comment" class="btn btn-primary pull-right" href="#PostComment">Post Comment</a>
+
+                        </div>
+                    
+                    
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            @Html.HiddenFor(model => model.ID)
+                            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.TextAreaFor(model => model.Description,6,47 ,new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Project</label>
+                            @*@Html.LabelFor(model => model.ProjectID, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @* @Html.DropDownListFor(model => model.ProjectID,Model.ProjectsDDL, new { @class = "form-control" })*@
+                                @Html.DropDownListFor(m => m.ProjectID, (IEnumerable<SelectListItem>)Model.ProjectsDDL, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ProjectID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Assigned To</label>
+                            @*@Html.LabelFor(model => model.AssignedTo, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(m => m.AssignedTo, (IEnumerable<SelectListItem>)Model.AssignTODDL, new { @class = "form-control" })
+                                @*  @Html.DropDownListFor(model => model.AssignedTo,  Model.AssignTODDL, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.AssignedTo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Referred To</label>
+                            @*@Html.LabelFor(model => model.RefereedTo, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(m => m.RefereedTo, (IEnumerable<SelectListItem>)Model.RefereerToDDL, new { @class = "form-control" })
+                                @*   @Html.DropDownListFor(model => model.RefereedTo,  Model.RefereerToDDL, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.RefereedTo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Due Date</label>
+                            @*@Html.LabelFor(model => model.DueDate, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.DueDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.DueDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Assigned Date</label>
+                            @*@Html.LabelFor(model => model.AssigndedDate, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AssigndedDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AssigndedDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Priority</label>
+                                  
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(m => m.PriorityID, (IEnumerable<SelectListItem>)Model.PriorityDDL, new { @class = "form-control" })
+                                @*   @Html.DropDownListFor(model => model.PriorityDDL,  Model.PriorityDDL, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.PriorityDDL, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.Task_Status, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <label class="control-label col-md-3">Task Status</label>
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(m => m.Task_Status, (IEnumerable<SelectListItem>)Model.TaskStatusDDl, new { @class = "form-control" })
+                                @*   @Html.DropDownListFor(model => model.PriorityDDL,  Model.PriorityDDL, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.Task_Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.TypeID, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                            <label class="control-label col-md-3">Task Type</label>
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(m => m.TypeID, (IEnumerable<SelectListItem>)Model.TypeDDL, new { @class = "form-control" })
+                                @*  @Html.DropDownListFor(model => model.TypeDDL, Model.TypeDDL, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.TypeDDL, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                @if (Model.Attachment1_Path != null) {
+                                    <div class="col-md-4 text-center">
+                                        <a href="#" class="img-pop" data-toggle="modal" data-target=".pop-up-image">
+                                            <img height="100" src="~/UploadedDocuments/@Model.Attachment1_Path" title="@Model.Attachment1_Name" />
+                                        </a>
+                                        <a href='@Url.Action("DownloadAttachment", new { filepath = @Model.Attachment1_Path })'>
+                                            <br />
+                                            @Model.Attachment1_Name <i class="fa fa-download"></i>
+                                        </a>
+                                    </div>
+                                }
+                                @if (Model.Attachment2_Path != null)
+                                {
+                                    <div class="col-md-4 text-center">
+                                        <a href="#" class="img-pop" data-toggle="modal" data-target=".pop-up-image">
+                                            <img height="100" src="~/UploadedDocuments/@Model.Attachment2_Path" title="@Model.Attachment2_Name" />
+                                        </a>
+                                        <a href='@Url.Action("DownloadAttachment", new { filepath = @Model.Attachment2_Path })'> 
+                                            <br />
+                                            @Model.Attachment2_Name <i class="fa fa-download"></i>
+                                        </a>
+                                    </div>
+                                }
+                                                                @if (Model.Attachment3_Path != null)
+                                {
+                                    <div class="col-md-4 text-center">
+                                        <a href="#" class="img-pop" data-toggle="modal" data-target=".pop-up-image">
+                                            <img height="100" src="~/UploadedDocuments/@Model.Attachment3_Path" title="@Model.Attachment3_Name" />
+                                        </a>
+                                        <a href='@Url.Action("DownloadAttachment", new { filepath = @Model.Attachment3_Path })'>
+                                            <br />
+                                            @Model.Attachment3_Name <i class="fa fa-download"></i>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Update" class="btn btn-info btn-block" />
+                                @if (ViewBag.Message != null)
+                                {
+                                    <label class="text-info">@ViewBag.Message</label>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+        </div>
+    </div>
+
+     
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-comments fa-fw"></i>
+                    Comments
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <ul class="chat">
+@{foreach (var comment in Model.Comments)
+{
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">@comment.CreatedBy</strong>
+                                    <small class="pull-right text-muted">
+                                        <i class="fa fa-clock-o fa-fw"></i> @comment.CreatedTime
+                                    </small>
+                                </div>
+                                <p>
+                                    @comment.Comment
+                                </p>
+                                <p>
+                                    @if (@comment.FileName != "")
+                                    {
+                                        @comment.FileName  <a href='@Url.Action("DownloadAttachment",new {filepath=@comment.FilePath})'> Download Attachment</a>
+                                    }
+                                </p>
+                            </div>
+                        </li>
+}
+}
+                    </ul>
+                </div>
+                <!-- /.panel-body -->
+            </div>                
+            </div>
+        </div>
+    </div>
+
+    <div id="PostComment" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Post Comment</h4>
+                </div>
+@using (Html.BeginForm("Comment", "Tickets", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="modal-body">
+                    
+                    <div class="form-horizontal">
+
+                        <div class="form-group">
+
+                            <div class="control-label col-md-3">Comment</div>
+                            <div class="col-md-8">
+                                @Html.Hidden("tid",Model.ID)
+                               @Html.TextArea("CommentText", new {@class="form-control",placeholder="Provide your comment",rows="5" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="control-label col-md-3">Upload a File</div>
+                            <div class="col-md-8">
+                                <span class="btn btn-primary btn-file btn-block">
+                                    Browse <input name="filecommentattachment" id="filecommentattachment" type="file">
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" id="btnpostcomment" value="Save Changes" /> 
+                </div>
+}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $('#DueDate,#AssignedDate').datepicker({
+            format: "mm/dd/yyyy"
+        });
+    });
+</script>
+
+<div class="modal fade pop-up-image" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myLargeModalLabel-1">Screenshot - <span id="screenName"></span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" id="screenshotPop">
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal mixer image -->
