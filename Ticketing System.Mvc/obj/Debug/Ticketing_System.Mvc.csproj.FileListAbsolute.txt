@@ -350,3 +350,4 @@ C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\bin\Sys
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.pdb
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+D:\New folder (5)\Ticketing System.Mvc\obj\Debug\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
