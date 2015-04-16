@@ -24,7 +24,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
 
@@ -70,7 +70,7 @@ namespace Ticketing_System.Repositoy
 
         public static List<UserDTO> GetUserProjectDetailsByProejectid(int ProjectID)
         {
-            var objcontext = new db_Zon_TechSupportEntities();
+            var objcontext = new Db_Zon_Test_techsupportEntities();
             List<UserDTO> users = new List<UserDTO>();
             {
                 string projectmanagerid = objcontext.Mst_Project.Where(x => x.ID == ProjectID).FirstOrDefault().PManagerID;
@@ -91,14 +91,14 @@ namespace Ticketing_System.Repositoy
         }
         public static string GetEmailByUid(string CreatedBy)
         {
-            var objcontext = new db_Zon_TechSupportEntities();
+            var objcontext = new Db_Zon_Test_techsupportEntities();
             return objcontext.AspNetUsers.Where(x => x.Id == CreatedBy).FirstOrDefault().Email;
         }
 
       public static string GetFnameByEmail(string email)
         {
 
-          using(var objts=new db_Zon_TechSupportEntities())
+          using(var objts=new Db_Zon_Test_techsupportEntities())
           {
               return objts.AspNetUsers.Where(a => a.Email==email ).FirstOrDefault().FirstName;
           }
@@ -116,7 +116,7 @@ namespace Ticketing_System.Repositoy
           try
           {
 
-              using (var objcontext = new db_Zon_TechSupportEntities())
+              using (var objcontext = new Db_Zon_Test_techsupportEntities())
               {
 
                   objreportdata=(from user in objcontext.Mst_ProjectUsers

@@ -47,7 +47,7 @@ $(document).ready(function () {
         //        $('#lblreporterrormessage').text(data.Message);
         //    }
         //});
-        debugger;
+        
         $.ajax({
             url: "../UserReport/GenerateReportEmail?userID=" + $('#UserID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val(),
             success: function (data) {

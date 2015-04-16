@@ -1,0 +1,82 @@
+﻿@model Ticketing_System.Core.UserDTO
+@{
+
+}
+<div id="page-wrapper">
+    <div class="col-lg-12">
+        <h5 class="pull-right"> Dashboard - > Users</h5>
+    </div>
+    <script src="~/Scripts/validation.js"></script>
+    <script src="~/Scripts/Validations.js"></script>
+    <div class="row">
+        <div class="col-lg-12">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Update user</h4>
+                    @Html.HiddenFor(model => model.Id)
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-3">First Name</label>
+                        @*@Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-2" })*@
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Last Name</label>
+                        @*@Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-2" })*@
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control",@readonly=true } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Mobile Number</label>
+                        @*@Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-2" })*@
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group hide" >
+                        <div class="control-label col-md-3"> Role</div>
+
+                        <div class="col-md-4" >
+                            @Html.DropDownListFor(model => model.RoleName, new SelectList(
+                  new List<Object>{
+                      new { value = "" , text = "Select Role"  },
+                       new { value = 1 , text = "Admin"  },
+                       new { value = 2 , text = "Client" },
+                       new { value = 3 , text = "User"}
+                    },
+                  "value",
+                  "text",
+                   ""), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-4">
+                            <input type="submit" value="Update" class="btn btn-info btn-block" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

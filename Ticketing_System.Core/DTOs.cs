@@ -227,8 +227,7 @@ namespace Ticketing_System.Core
         [Required]
         public string Title { get; set; }
          [Required]
-        public string ProjectName { get; set; }
-       [Required]
+        
         public string Description { get; set; }
          [Required]
         public int ProjectID { get; set; }
@@ -349,6 +348,15 @@ namespace Ticketing_System.Core
         public string oldpassword { get; set; }
 
         public string newpassword { get; set; }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MobileNumber { get; set; }
+
+        public string Email { get; set; }
+
+        public int Role { get; set; }
+
     
     }
 

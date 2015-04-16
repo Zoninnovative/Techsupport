@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Ticketing_System.Core;
 using Ticketing_System.Repositoy;
 
 namespace Ticketing_System.API.Controllers
@@ -23,12 +24,16 @@ namespace Ticketing_System.API.Controllers
             }
             else if (type == "2")
             {
-                var data= UserRepository.GetAllClientsandAdmins();
+                var data= UserRepository.GetAllClients();
 
                 return data;
             }
             else if (type=="1")
                 return UserRepository.GetAllDevelopers();
+            else if (type == "3")
+                return UserRepository.GetAllAdmins();
+            else if (type == "4")
+                return UserRepository.GetAllClientsandAdmins();
 
             else
                 return UserRepository.GetAllUsers();
@@ -41,6 +46,24 @@ namespace Ticketing_System.API.Controllers
             return UserRepository.Delete(uid);
         }
 
+        public dynamic Put(UserDTO userDTO)
+        {
+
+            CustomResponse objres = new CustomResponse();
+            try
+            {
+
+
+            }
+            catch (Exception ex)
+            {
+                objres.Status = CustomResponseStatus.Exception;
+                objres.Message = ex.Message;
+                objres.Response = null;
+
+            }
+            return objres;
+        }
        
     }
 }

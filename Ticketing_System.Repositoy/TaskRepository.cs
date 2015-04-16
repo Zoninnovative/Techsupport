@@ -20,7 +20,7 @@ namespace Ticketing_System.Repositoy
 
                 List<TaskDTO> objtasks = new List<TaskDTO>();
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     if (ProjectID == 0)
@@ -37,7 +37,7 @@ namespace Ticketing_System.Repositoy
 
                                         (0==priority || task.PriorityID==priority)
 
-                                        select new TaskDTO { Title = task.Title, ID = task.ID,ProjectName=task.Mst_Project.Name, Task_Status = task.Task_Status, Description = task.Description, TaskDisplayName = task.TaskDisplayName, AssignedToName = user.FirstName, RefereedToName = user1.FirstName, PriorityName = task.Mst_TaskPriority.PriorityName, TaskTypeName = task.Mst_TaskType.Type,Task_Type_Name=task.Mst_TaskType.Type,Task_Status_Name=task.Mst_TaskStatus.Task_Status, AssigndedDate = task.AssigndedDate }).OrderByDescending(x=>x.ID).Take(5000).ToList();
+                                        select new TaskDTO { Title = task.Title, ID = task.ID,Task_Status = task.Task_Status, Description = task.Description, TaskDisplayName = task.TaskDisplayName, AssignedToName = user.FirstName, RefereedToName = user1.FirstName, PriorityName = task.Mst_TaskPriority.PriorityName, TaskTypeName = task.Mst_TaskType.Type,Task_Type_Name=task.Mst_TaskType.Type,Task_Status_Name=task.Mst_TaskStatus.Task_Status, AssigndedDate = task.AssigndedDate }).OrderByDescending(x=>x.ID).Take(5000).ToList();
                         }
                         else if (UserRepository.GetUserRole(userid) == "Client")
                         {
@@ -119,7 +119,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     // get short name of the project and get the max count of the tickets and use it as display name 
                     string shortname = objcontext.Mst_Project.Where(x => x.ID == objnewTask.ProjectID).FirstOrDefault().ShortName;
@@ -155,7 +155,7 @@ namespace Ticketing_System.Repositoy
 
                 TaskDTO  objtasks = new  TaskDTO();
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
   
                         objtasks = (from task in objcontext.Mst_Task 
@@ -204,7 +204,7 @@ namespace Ticketing_System.Repositoy
 
                 if (UserRepository.GetUserRole(userid) == "Developer")
                 {
-                    using (var objcontext = new db_Zon_TechSupportEntities())
+                    using (var objcontext = new Db_Zon_Test_techsupportEntities())
                     {
 
                         objtasks = (from task in objcontext.Mst_Task
@@ -225,7 +225,7 @@ namespace Ticketing_System.Repositoy
                 }
                 else if (UserRepository.GetUserRole(userid) == "Client")
                 {
-                    using (var objcontext = new db_Zon_TechSupportEntities())
+                    using (var objcontext = new Db_Zon_Test_techsupportEntities())
                     {
 
                         objtasks = (from task in objcontext.Mst_Task
@@ -268,7 +268,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     // get short name of the project and get the max count of the tickets and use it as display name 
                    int tid=objupdateTask.ID;;
@@ -303,7 +303,7 @@ namespace Ticketing_System.Repositoy
 
         public static string GetTaskNameByID(int? task_Id)
         {
-            using (var objconext = new db_Zon_TechSupportEntities())
+            using (var objconext = new Db_Zon_Test_techsupportEntities())
             {
                 try
                 {

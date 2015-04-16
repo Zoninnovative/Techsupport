@@ -16,7 +16,7 @@ namespace Ticketing_System.Repositoy
            CustomResponse objresponse = new CustomResponse();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    objresponse.Status = CustomResponseStatus.Successful;
                    objresponse.Response = (from tasktype in objcontext.Mst_TaskPriority select new TypeAndPriorityDTO { Name = tasktype.PriorityName, ID = tasktype.ID }).ToList();
@@ -38,7 +38,7 @@ namespace Ticketing_System.Repositoy
            CustomResponse objresponse = new CustomResponse();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    objresponse.Status = CustomResponseStatus.Successful;
                    objresponse.Response = (from tasktype in objcontext.Mst_TaskType select new TypeAndPriorityDTO {Name=tasktype.Type,ID=tasktype.ID }).ToList();
@@ -60,7 +60,7 @@ namespace Ticketing_System.Repositoy
            CustomResponse objresponse = new CustomResponse();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    objresponse.Status = CustomResponseStatus.Successful;
                    objresponse.Response = (from status in objcontext.Mst_TaskStatus select new TypeAndPriorityDTO { Name = status.Task_Status, ID = status.ID }).ToList();
@@ -82,7 +82,7 @@ namespace Ticketing_System.Repositoy
            CustomResponse objresponse = new CustomResponse();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    objresponse.Status = CustomResponseStatus.Successful;
                    objresponse.Response= objcontext.AspNetUsers.Where(x => x.Email == email).FirstOrDefault().Id;
@@ -108,7 +108,7 @@ namespace Ticketing_System.Repositoy
        public static string GetPrioritynameByPid(int? pid)
        {
            
-           using (var objts = new db_Zon_TechSupportEntities())
+           using (var objts = new Db_Zon_Test_techsupportEntities())
                return objts.Mst_TaskPriority.Where(a => a.ID == pid).FirstOrDefault().PriorityName;
 
        }
@@ -116,7 +116,7 @@ namespace Ticketing_System.Repositoy
        public static string GetTasknameByPid(int? pid)
        {
           
-           using (var objts = new db_Zon_TechSupportEntities())
+           using (var objts = new Db_Zon_Test_techsupportEntities())
                return objts.Mst_TaskType.Where(a => a.ID == pid).FirstOrDefault().Type;
 
        }
@@ -126,7 +126,7 @@ namespace Ticketing_System.Repositoy
        public static string GetTaskStausByPid(int? pid)
        {
           
-           using (var objts = new db_Zon_TechSupportEntities())
+           using (var objts = new Db_Zon_Test_techsupportEntities())
                return objts.Mst_TaskStatus.Where(a => a.ID == pid).FirstOrDefault().Task_Status;
 
        }

@@ -19,7 +19,7 @@ namespace Ticketing_System.Repositoy
             try
             {
                 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     if (UserRepository.GetUserRole(username) == "Administrator")
@@ -145,7 +145,7 @@ namespace Ticketing_System.Repositoy
          try
          {
 
-             using (var objcontext = new db_Zon_TechSupportEntities())
+             using (var objcontext = new Db_Zon_Test_techsupportEntities())
              {
                  objcontext.Mst_Project.Add(objnewproject);
                  objcontext.SaveChanges();
@@ -176,7 +176,7 @@ namespace Ticketing_System.Repositoy
 
                 ProjectDTO objproject = new ProjectDTO();
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     objproject = (from proj in objcontext.Mst_Project
@@ -220,7 +220,7 @@ namespace Ticketing_System.Repositoy
             CustomResponse objres = new CustomResponse();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     int pid=objupdateproject.ID;
                     Mst_Project objdbproject = objcontext.Mst_Project.Where(x => x.ID == pid).FirstOrDefault();
@@ -263,7 +263,7 @@ namespace Ticketing_System.Repositoy
             try
             {
                 List<string> objUserIds = new List<string>();
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     // Add ProjectManager and Client Info
                     Mst_Project objproject = objcontext.Mst_Project.Where(x => x.ID == projectid).FirstOrDefault();

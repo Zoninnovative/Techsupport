@@ -25,7 +25,7 @@ $(document).ready(function () {
             $('#lblreporterrormessage').text('Please provide from and to dates');
         }
         else
-            window.location.href = "../UserReport/GenerateReport?userID=" + $('#ProjectID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val();
+            window.location.href = "../UserReport/GenerateReport?userID=" + $('#UserID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val();
     });
 
 
@@ -41,10 +41,17 @@ $(document).ready(function () {
         //generate report and send it to user
         ////alert('this is email report');
         ////alert($('#ProjectID').val());
+        //$.ajax({
+        //    url: "../ProjectReport/GenerateReportEmail?ProjectID=" + $('#ProjectID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val(),
+        //    success: function (data) {
+        //        $('#lblreporterrormessage').text(data.Message);
+        //    }
+        //});
+        
         $.ajax({
-            url: "../UserReport/GenerateReportEmail?userID=" + $('#ProjectID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val(),
+            url: "../UserReport/GenerateReportEmail?userID=" + $('#UserID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val(),
             success: function (data) {
-                ////alert(data.Message);
+                $('#lblreporterrormessage').text(data.Message);
             }
         });
     });

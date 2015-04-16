@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="db_Zon_TechSupportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="Db_Zon_Test_techsupportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="C__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
@@ -147,6 +147,12 @@
     <Property Name="TypeID" Type="Int32" />
     <Property Name="Task_Status" Type="Int32" />
     <Property Name="Status" Type="Boolean" />
+    <Property Name="Attachment1_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment1_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment2_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment2_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment3_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment3_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Mst_Task_AspNetUsers" FromRole="Mst_Task" ToRole="AspNetUsers" />
@@ -158,12 +164,6 @@
     <NavigationProperty Name="Mst_TaskPriority" Relationship="Self.FK_Table_2_Mst_Priority" FromRole="Mst_Task" ToRole="Mst_TaskPriority" />
     <NavigationProperty Name="Mst_TaskType" Relationship="Self.FK_Table_2_Mst_TaskType" FromRole="Mst_Task" ToRole="Mst_TaskType" />
     <NavigationProperty Name="Trans_Ticket" Relationship="Self.FK_Trans_Ticket_Mst_Task" FromRole="Mst_Task" ToRole="Trans_Ticket" />
-    <Property Name="Attachment1_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Attachment1_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Attachment2_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Attachment2_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Attachment3_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Attachment3_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Mst_TaskPriority">
     <Key>
@@ -470,7 +470,7 @@
     <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
     <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="db_Zon_TechSupportdb_Zon_TechSupportEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Db_Zon_Test_techsupportEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
     <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
     <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />

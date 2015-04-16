@@ -9,6 +9,7 @@ using System.Web.Script.Serialization;
 using Ticketing_System.Core;
 using Ticketing_System.Mvc.CustomIdentityClasses;
 using Ticketing_System.Mvc.Models;
+using Ticketing_System.Repositoy;
 
 namespace Ticketing_System.Mvc.Controllers
 {
@@ -33,7 +34,7 @@ namespace Ticketing_System.Mvc.Controllers
         public ActionResult ListAll(string Role)
         {
             CustomResponse res = APICalls.Get("usersapi/Get?type="+Role);
-            List<SelectListItem> objroles = new List<SelectListItem> {  new SelectListItem { Text = "Clients", Value = "2" }, new SelectListItem { Text = "Developers", Value = "1" }, new SelectListItem { Text = "All", Value = "0" } };
+            List<SelectListItem> objroles = new List<SelectListItem> { new SelectListItem { Text = "Clients", Value = "2" }, new SelectListItem { Text = "Developers", Value = "1" }, new SelectListItem { Text = "All", Value = "0" }, new SelectListItem { Text = "Admins", Value = "3" } };
             if (Role == "" || Role ==null)
                 objroles.Find(x => x.Text == "All").Selected = true;
             else
@@ -69,22 +70,30 @@ namespace Ticketing_System.Mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                objuser.CreatedBy = User.Identity.GetUserId();
-                CustomResponse objres = APICalls.Post("AuthenticationAPI/Post?Type=3",objuser);
-                if (objres.Status == CustomResponseStatus.Successful)
+                if (UserRepository.UpdateStatus(objuser.Email, "0") == 0)
                 {
-                    return RedirectToRoute("UsersHomeRoute", new { Role = "" });
+                    objuser.CreatedBy = User.Identity.GetUserId();
+                    CustomResponse objres = APICalls.Post("AuthenticationAPI/Post?Type=3", objuser);
+                    if (objres.Status == CustomResponseStatus.Successful)
+                    {
+                        return RedirectToRoute("UsersHomeRoute", new { Role = "" });
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Error While Creating User";
+                    }
                 }
                 else
                 {
-                    ViewBag.Message = "Error While Creating User";
+                    UserRepository.ChangeStatus(objuser.Email);
+                    return RedirectToRoute("UsersHomeRoute", new { Role = "" });
                 }
             }
             return View();
         }
         public ActionResult Delete(string id)
         {
-            CustomResponse res = APICalls.Delete("AuthenticationAPI/Delete?uid=" + id);
+            CustomResponse res = APICalls.Delete("AuthenticationAPI/Delete?userid=" + id);
             if (res.Status == CustomResponseStatus.Successful)
             {
                 TempData["Message"] = res.Message;
@@ -97,5 +106,43 @@ namespace Ticketing_System.Mvc.Controllers
             }
         }
 
+        public ActionResult EditUser(string id)
+        {
+            UserDTO objuserinfo = new UserDTO();
+            CustomResponse res = APICalls.Get("AuthenticationAPI/Get?username=" + id + "&password=0&type=2");
+            if (res.Status == CustomResponseStatus.Successful)
+            {
+                JavaScriptSerializer serializer1 = new JavaScriptSerializer();
+                serializer1.MaxJsonLength = 1000000000;
+                var uinfo = res.Response.ToString();
+                objuserinfo = serializer1.Deserialize<UserDTO>(uinfo);
+                return View(objuserinfo);
+            }
+            else
+            {
+                ViewBag.Message = "Failed to Edit User";
+                return RedirectToRoute("UsersHomeRoute", new { Role = "" });
+            }
+        }
+        [HttpPost]
+        public ActionResult EditUser(UserDTO objuser)
+        {
+             
+                    objuser.CreatedBy = User.Identity.GetUserId();
+                    ChangePasswordDTO objuserinfo = new ChangePasswordDTO {userid=objuser.Id,FirstName=objuser.FirstName,LastName=objuser.LastName,Email=objuser.Email,MobileNumber=objuser.MobileNumber,ChageType=3 };
+                    CustomResponse objres = APICalls.Put("AuthenticationAPI/Put", objuserinfo);
+                    if (objres.Status == CustomResponseStatus.Successful)
+                    {
+                        return RedirectToRoute("UsersHomeRoute", new { Role = "" });
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Error While Updating User";
+                    }
+                
+             
+            return View();
+        }
+        
     }
 }

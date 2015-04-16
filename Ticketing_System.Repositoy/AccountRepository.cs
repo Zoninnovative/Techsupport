@@ -21,7 +21,7 @@ namespace Ticketing_System.Repositoy
 
               UserDTO objuser = new UserDTO();
 
-              using (var objcontext = new db_Zon_TechSupportEntities())
+              using (var objcontext = new Db_Zon_Test_techsupportEntities())
               {
 
                   objuser = (from user in objcontext.AspNetUsers
@@ -60,14 +60,14 @@ namespace Ticketing_System.Repositoy
           CustomResponse objres = new CustomResponse();
           try
           {
-              using (var objcontext = new db_Zon_TechSupportEntities())
+              using (var objcontext = new Db_Zon_Test_techsupportEntities())
               {
                   string uid = objuserinfo.Id;
                   AspNetUser objuser = objcontext.AspNetUsers.Where(x => x.Id == uid).FirstOrDefault();
 
-               //   objuser.FirstName = objuserinfo.FirstName;
-                //  objuser.LastName = objuserinfo.LastName;
-               //   objuser.MobileNumber = objuserinfo.MobileNumber;
+                  objuser.FirstName = objuserinfo.FirstName;
+                  objuser.LastName = objuserinfo.LastName;
+                  objuser.MobileNumber = objuserinfo.MobileNumber;
                   objcontext.SaveChanges();
                   objres.Message = "Success";
                   objres.Response = objuser;
@@ -86,7 +86,7 @@ namespace Ticketing_System.Repositoy
 
        public static void AddPasswordResetToken(string userid,string token)
        {
-           using (var context = new db_Zon_TechSupportEntities())
+           using (var context = new Db_Zon_Test_techsupportEntities())
            {
                AspNetUser objuser = context.AspNetUsers.Where(x => x.Id == userid).FirstOrDefault();
                objuser.PasswordHash = token;
@@ -97,7 +97,7 @@ namespace Ticketing_System.Repositoy
 
        public static bool CompareResetToken(string userid, string key)
        {
-           using (var context = new db_Zon_TechSupportEntities())
+           using (var context = new Db_Zon_Test_techsupportEntities())
            {
                return context.AspNetUsers.Where(x => x.Id == userid && x.PasswordHash == key).Any();
            }

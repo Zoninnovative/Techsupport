@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     
@@ -74,7 +75,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     objcontext.Mst_Project.Add(objnewproject);
                     objcontext.SaveChanges();
@@ -93,13 +94,13 @@ namespace Ticketing_System.Repositoy
             }
         }
 
-        public static dynamic GetAllClientsandAdmins()
+        public static dynamic GetAllAdmins()
         { 
         
            CustomResponse objres = new CustomResponse();
             try
             {
-          using (var objcontext = new  db_Zon_TechSupportEntities())
+          using (var objcontext = new  Db_Zon_Test_techsupportEntities())
                 {
 
 
@@ -111,7 +112,69 @@ namespace Ticketing_System.Repositoy
                         if (user.Status=="1")
                         {
 
-                            SqlConnection con = new SqlConnection("data source=sharedmssql4.znetindia.net,1234;initial catalog=db_Zon_TechSupport;user id=dbuser_Zon_Ticketing;password=ZonDb6tj&^%#$l;");
+                            SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
+                            // 1. Instantiate a new command with a query and connection
+                            con.Open();
+                            SqlCommand cmd = new SqlCommand("select RoleId from AspNetUserRoles where UserId=@uid", con);
+                            cmd.Parameters.AddWithValue("@uid", user.Id);
+                            // 2. Call Execute reader to get query results
+                            SqlDataReader rdr = cmd.ExecuteReader();
+                            // print the CategoryName of each record
+                            while (rdr.Read())
+                            {
+                                if (rdr[0].ToString() == "594875d4-5d30-4d84-bdb3-6a9309799ae2")
+                                {
+                                    string rolename ="Administrator";
+                                    objusersdto.Add(new UserDTO { Id = user.Id, Email = user.Email,RoleName=rolename, MobileNumber = user.MobileNumber, FirstName = user.FirstName, LastName = user.LastName });
+                                }
+                                    continue;
+                            }
+                            con.Close();
+                        }
+                    
+                    }
+
+                            objres.Message = "Success";
+                            objres.Response = objusersdto;
+                        objres.Status = CustomResponseStatus.Successful;
+                        return objres;
+                   
+
+                }
+                objres.Message = "Success";
+                objres.Response = null;
+                objres.Status = CustomResponseStatus.Successful;
+                return objres;
+
+            }
+            catch (Exception ex)
+            {
+                objres.Message = ex.Message;
+                objres.Response = null;
+                objres.Status = CustomResponseStatus.UnSuccessful;
+                return objres;
+
+            }
+        }
+        public static dynamic GetAllClientsandAdmins()
+        { 
+        
+           CustomResponse objres = new CustomResponse();
+            try
+            {
+          using (var objcontext = new  Db_Zon_Test_techsupportEntities())
+                {
+
+
+                    List<AspNetUser> objuser = objcontext.AspNetUsers.ToList();
+                    List<AspNetUser> objoutput = new List<AspNetUser>();
+                    List<UserDTO> objusersdto = new List<UserDTO>();
+                    foreach (AspNetUser user in objuser)
+                    {
+                        if (user.Status=="1")
+                        {
+
+                            SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
                             // 1. Instantiate a new command with a query and connection
                             con.Open();
                             SqlCommand cmd = new SqlCommand("select RoleId from AspNetUserRoles where UserId=@uid", con);
@@ -157,13 +220,13 @@ namespace Ticketing_System.Repositoy
         }
 
 
-        public static dynamic GetAllDevelopers()
+        public static dynamic GetAllClients()
         {
 
             CustomResponse objres = new CustomResponse();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
 
@@ -174,7 +237,70 @@ namespace Ticketing_System.Repositoy
                     {
                         if (user.Status == "1")
                         {
-                            SqlConnection con = new SqlConnection("data source=sharedmssql4.znetindia.net,1234;initial catalog=db_Zon_TechSupport;user id=dbuser_Zon_Ticketing;password=ZonDb6tj&^%#$l;");
+
+                            SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
+                            // 1. Instantiate a new command with a query and connection
+                            con.Open();
+                            SqlCommand cmd = new SqlCommand("select RoleId from AspNetUserRoles where UserId=@uid", con);
+                            cmd.Parameters.AddWithValue("@uid", user.Id);
+                            // 2. Call Execute reader to get query results
+                            SqlDataReader rdr = cmd.ExecuteReader();
+                            // print the CategoryName of each record
+                            while (rdr.Read())
+                            {
+                                if (rdr[0].ToString() == "294e2276-384e-4844-ad8a-7a4c4dd9fcdc")
+                                {
+                                    string rolename = "Client";
+                                    objusersdto.Add(new UserDTO { Id = user.Id, Email = user.Email, RoleName = rolename, MobileNumber = user.MobileNumber, FirstName = user.FirstName, LastName = user.LastName });
+                                }
+                                continue;
+                            }
+                            con.Close();
+                        }
+
+                    }
+
+                    objres.Message = "Success";
+                    objres.Response = objusersdto;
+                    objres.Status = CustomResponseStatus.Successful;
+                    return objres;
+
+
+                }
+                objres.Message = "Success";
+                objres.Response = null;
+                objres.Status = CustomResponseStatus.Successful;
+                return objres;
+
+            }
+            catch (Exception ex)
+            {
+                objres.Message = ex.Message;
+                objres.Response = null;
+                objres.Status = CustomResponseStatus.UnSuccessful;
+                return objres;
+
+            }
+        }
+
+        public static dynamic GetAllDevelopers()
+        {
+
+            CustomResponse objres = new CustomResponse();
+            try
+            {
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
+                {
+
+
+                    List<AspNetUser> objuser = objcontext.AspNetUsers.ToList();
+                    List<AspNetUser> objoutput = new List<AspNetUser>();
+                    List<UserDTO> objusersdto = new List<UserDTO>();
+                    foreach (AspNetUser user in objuser)
+                    {
+                        if (user.Status == "1")
+                        {
+                            SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
                             // 1. Instantiate a new command with a query and connection
                             con.Open();
                             SqlCommand cmd = new SqlCommand("select RoleId from AspNetUserRoles where UserId=@uid", con);
@@ -224,7 +350,35 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
+                {
+                    AspNetUser objuser = objcontext.AspNetUsers.Where(x => x.Id == Userid).FirstOrDefault();
+                    objuser.Status = "0";
+                    objcontext.SaveChanges();
+                    objres.Message = "Success";
+                    objres.Response = objuser;
+                    objres.Status = CustomResponseStatus.Successful;
+                    return objres;
+                }
+            }
+            catch (Exception ex)
+            {
+                objres.Message = ex.Message;
+                objres.Response = null;
+                objres.Status = CustomResponseStatus.UnSuccessful;
+                return objres;
+            }
+        }
+
+
+        public static dynamic EDIT(string Userid)
+        {
+
+            CustomResponse objres = new CustomResponse();
+            try
+            {
+
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     AspNetUser objuser = objcontext.AspNetUsers.Where(x => x.Id == Userid).FirstOrDefault();
                     objuser.Status = "0";
@@ -247,7 +401,7 @@ namespace Ticketing_System.Repositoy
         public static string GetUserRole(string uid)//
         {
             List<string> roles = new List<string>();
-            SqlConnection con = new SqlConnection("data source=sharedmssql4.znetindia.net,1234;initial catalog=db_Zon_TechSupport;user id=dbuser_Zon_Ticketing;password=ZonDb6tj&^%#$l;");
+            SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
             // 1. Instantiate a new command with a query and connection
             con.Open();
             SqlCommand cmd = new SqlCommand("select RoleId from AspNetUserRoles where UserId=@uid", con);
@@ -281,21 +435,21 @@ namespace Ticketing_System.Repositoy
 
         public static string GetFnamebyUid(String uid)
         {
-            var objcontext = new db_Zon_TechSupportEntities();
+            var objcontext = new Db_Zon_Test_techsupportEntities();
             return objcontext.AspNetUsers.Where(a => a.Id == uid).FirstOrDefault().FirstName;
 
 
         }
         public static string GetProjectNmaebyid(int pid)
         {
-            var objcontext = new db_Zon_TechSupportEntities();
+            var objcontext = new Db_Zon_Test_techsupportEntities();
             return objcontext.Mst_Project.Where(a => a.ID == pid).FirstOrDefault().Name;
 
         }//
 
        public static string GetTaskNameByID(int TaskID)
        {
-           var objcontext = new db_Zon_TechSupportEntities();
+           var objcontext = new Db_Zon_Test_techsupportEntities();
            return objcontext.Mst_Task.Where(a => a.ID == TaskID).FirstOrDefault().TaskDisplayName;
        }
 
@@ -305,7 +459,7 @@ namespace Ticketing_System.Repositoy
            List<string> EmailAddresses = new List<string>();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    EmailAddresses = (from p in objcontext.AspNetUsers where objuserids.Contains(p.Id) select p).Select(x=>x.Email).ToList();
                    return EmailAddresses;
@@ -317,14 +471,26 @@ namespace Ticketing_System.Repositoy
            }
 
        }
+       public static int UpdateStatus(string EmailID,string Status)
+       {
+           var objcontext = new Db_Zon_Test_techsupportEntities();
+           return objcontext.AspNetUsers.Where(x => x.Email == EmailID && x.Status == Status).Count();
+       }
 
+       public static void ChangeStatus(string Email)
+       {
+           var objcontext = new Db_Zon_Test_techsupportEntities();
+           AspNetUser objUser = objcontext.AspNetUsers.Where(x => x.Email == Email).First();
+           objUser.Status = "1";
+           objcontext.SaveChanges();
+       }
        public static dynamic UpdateProfile(UserDTO objuser)
        {
            CustomResponse objres = new CustomResponse();
            try
            {
 
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
                    // get short name of the project and get the max count of the tickets and use it as display name 
                    string uid = objuser.Id; 
@@ -350,6 +516,7 @@ namespace Ticketing_System.Repositoy
            }
        
        }
+
        
     }
 }

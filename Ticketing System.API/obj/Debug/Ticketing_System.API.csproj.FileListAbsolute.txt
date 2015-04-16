@@ -297,6 +297,7 @@ C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Sys
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.Optimization.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.WebPages.Deployment.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.WebPages.dll
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Ticketing_System.Core.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Ticketing_System.Repositoy.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\WebGrease.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Microsoft.AspNet.Identity.Core.xml
@@ -328,9 +329,3 @@ C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Mic
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.Http.Owin.xml
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\obj\Debug\Ticketing System.API.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\obj\Debug\Ticketing System.API.pdb
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.Razor.dll
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.WebPages.Razor.dll
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.Razor.xml
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\System.Web.WebPages.Razor.xml
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.API\bin\Ticketing_System.Core.dll
-D:\New folder (5)\Ticketing System.API\obj\Debug\Ticketing_System.API.csprojResolveAssemblyReference.cache

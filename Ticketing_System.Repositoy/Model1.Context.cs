@@ -14,10 +14,10 @@ namespace Ticketing_System.Repositoy
     using System.Data.Entity.Infrastructure;
     using Ticketing_System.Core;
     
-    public partial class  db_Zon_TechSupportEntities : DbContext
+    public partial class Db_Zon_Test_techsupportEntities : DbContext
     {
-        public  db_Zon_TechSupportEntities()
-            : base("name=db_Zon_TechSupportEntities")
+        public Db_Zon_Test_techsupportEntities()
+            : base("name=Db_Zon_Test_techsupportEntities")
         {
         }
     

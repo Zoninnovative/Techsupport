@@ -17,7 +17,7 @@ namespace Ticketing_System.Repositoy
             try
             {
 
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     objcontext.Trans_Ticket.Add(objtasktransaction);
                     objcontext.SaveChanges();
@@ -43,7 +43,7 @@ namespace Ticketing_System.Repositoy
             CustomResponse objres = new CustomResponse();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     Mst_Task objtask = objcontext.Mst_Task.Where(x => x.ID == taskid).FirstOrDefault();
                     Trans_Ticket objtasktrans = new Trans_Ticket();
@@ -78,7 +78,7 @@ namespace Ticketing_System.Repositoy
 
         public static int GetProjectidByTaskid(int Tid)
         {
-            using (var objts = new db_Zon_TechSupportEntities())
+            using (var objts = new Db_Zon_Test_techsupportEntities())
             {
 
                 return objts.Mst_Task.Where(a => a.ID == Tid).FirstOrDefault().ProjectID;

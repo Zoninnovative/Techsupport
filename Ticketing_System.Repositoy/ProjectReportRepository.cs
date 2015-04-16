@@ -24,7 +24,7 @@ namespace Ticketing_System.Repositoy
            try
            {
 
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
 
 
@@ -74,7 +74,7 @@ namespace Ticketing_System.Repositoy
            try
            {
 
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
 
 

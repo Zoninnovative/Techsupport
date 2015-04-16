@@ -7,6 +7,7 @@ $(document).ready(function () {
 
 
     $('#addFileUpload').click(function () {
+        debugger;
         if ($('.fileUploader').length < 3) {
             var fileUploader = $('#fileUploader').clone();
             $(fileUploader).find('.col-md-1 i').removeClass('fa-plus').addClass('fa-times');

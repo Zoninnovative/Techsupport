@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,25 +19,25 @@ namespace Ticketing_System.Repositoy
             List<DashBoardStatisticsDTO> StatisticsDTO = new List<DashBoardStatisticsDTO>();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     // projects
                     StatisticsDTO.Add(new DashBoardStatisticsDTO { Type = "1", Count = objcontext.Mst_Project.Count() });
                     // clients
-                    SqlConnection con = new SqlConnection("data source=sharedmssql4.znetindia.net,1234;initial catalog=db_Zon_TechSupport;user id=dbuser_Zon_Ticketing;password=ZonDb6tj&^%#$l;");
+                    SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["Db_Zon_Test_techsupportEntities"].ToString());
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id ", con);
+                    SqlCommand cmd = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id and u.Status=1", con);
                     cmd.Parameters.AddWithValue("@roleid", "294e2276-384e-4844-ad8a-7a4c4dd9fcdc");
                     StatisticsDTO.Add(new DashBoardStatisticsDTO { Type = "2", Count = Convert.ToInt32(cmd.ExecuteScalar()) });
                     // admins
-                    SqlCommand cmd1 = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id ", con);
+                    SqlCommand cmd1 = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id and u.Status=1", con);
                     cmd1.Parameters.AddWithValue("@roleid", "594875d4-5d30-4d84-bdb3-6a9309799ae2");
                     StatisticsDTO.Add(new DashBoardStatisticsDTO { Type = "3", Count = Convert.ToInt32(cmd1.ExecuteScalar()) });
                     // users-developers
-                    SqlCommand cmd2 = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id ", con);
+                    SqlCommand cmd2 = new SqlCommand("select count (distinct ur.UserId) from AspNetUserRoles ur,AspNetUsers u where  ur.RoleId=@roleid  and ur.Userid =u.Id and u.Status=1", con);
                     cmd2.Parameters.AddWithValue("@roleid", "15d2fcc9-23c3-4ad8-b93d-d134d3f9349e");
-                    StatisticsDTO.Add(new DashBoardStatisticsDTO { Type = "4", Count = Convert.ToInt32(cmd1.ExecuteScalar()) });
+                    StatisticsDTO.Add(new DashBoardStatisticsDTO { Type = "4", Count = Convert.ToInt32(cmd2.ExecuteScalar()) });
                     con.Close();
                     objres.Message = "Success";
                     objres.Response = StatisticsDTO;
@@ -62,7 +63,7 @@ namespace Ticketing_System.Repositoy
             List<ProjectTicketUsersDTO> StatisticsDTO = new List<ProjectTicketUsersDTO>();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
                     List<Mst_Project> ProjectsList = objcontext.Mst_Project.ToList();
                     foreach (Mst_Project proj in ProjectsList)
@@ -97,7 +98,7 @@ namespace Ticketing_System.Repositoy
             CustomResponse objres = new CustomResponse();
             try
             {
-                using (var objcontext = new db_Zon_TechSupportEntities())
+                using (var objcontext = new Db_Zon_Test_techsupportEntities())
                 {
 
                     List<Trans_TicketDTO> ActivityDTO = (from objtrans in objcontext.Trans_Ticket

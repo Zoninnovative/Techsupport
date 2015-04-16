@@ -29,6 +29,7 @@ namespace Ticketing_System.Mvc.Controllers
                 var jsondata = ObjActivityData.Response.ToString();
                objdashboardModel.ActivityDTO=serializer1.Deserialize<List<Trans_TicketDTO>>(jsondata);
             }
+
             CustomResponse response = APICalls.Get("DashboardAPI/Get?Type=1&pageno=0");
             if (response.Status == CustomResponseStatus.Successful)
             {

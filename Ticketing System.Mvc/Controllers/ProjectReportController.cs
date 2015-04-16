@@ -1,4 +1,7 @@
 ﻿using System;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
+using iTextSharp.text.api;
 
 
 using System.Collections.Generic;

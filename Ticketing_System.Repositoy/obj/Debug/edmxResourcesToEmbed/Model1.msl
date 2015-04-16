@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="db_Zon_TechSupportModelStoreContainer" CdmEntityContainer="db_Zon_TechSupportdb_Zon_TechSupportEntities">
+  <EntityContainerMapping StorageEntityContainer="Db_Zon_Test_techsupportModelStoreContainer" CdmEntityContainer="Db_Zon_Test_techsupportEntities">
     <EntitySetMapping Name="C__MigrationHistory">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.C__MigrationHistory">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.C__MigrationHistory">
         <MappingFragment StoreEntitySet="__MigrationHistory">
           <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
           <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetRoles">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.AspNetRole">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.AspNetRole">
         <MappingFragment StoreEntitySet="AspNetRoles">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserClaims">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.AspNetUserClaim">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.AspNetUserClaim">
         <MappingFragment StoreEntitySet="AspNetUserClaims">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -32,7 +32,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserLogins">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.AspNetUserLogin">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.AspNetUserLogin">
         <MappingFragment StoreEntitySet="AspNetUserLogins">
           <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
           <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
@@ -41,7 +41,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUsers">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.AspNetUser">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.AspNetUser">
         <MappingFragment StoreEntitySet="AspNetUsers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -64,7 +64,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_Project">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_Project">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_Project">
         <MappingFragment StoreEntitySet="Mst_Project">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -84,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_Project_Documents">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_Project_Documents">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_Project_Documents">
         <MappingFragment StoreEntitySet="Mst_Project_Documents">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -99,7 +99,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_ProjectUsers">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_ProjectUsers">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_ProjectUsers">
         <MappingFragment StoreEntitySet="Mst_ProjectUsers">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
@@ -109,14 +109,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_Task">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_Task">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_Task">
         <MappingFragment StoreEntitySet="Mst_Task">
-          <ScalarProperty Name="Attachment3_Path" ColumnName="Attachment3_Path" />
-          <ScalarProperty Name="Attachment3_Name" ColumnName="Attachment3_Name" />
-          <ScalarProperty Name="Attachment2_Path" ColumnName="Attachment2_Path" />
-          <ScalarProperty Name="Attachment2_Name" ColumnName="Attachment2_Name" />
-          <ScalarProperty Name="Attachment1_Path" ColumnName="Attachment1_Path" />
-          <ScalarProperty Name="Attachment1_Name" ColumnName="Attachment1_Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />
@@ -130,13 +124,19 @@
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="Task_Status" ColumnName="Task_Status" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Attachment1_Name" ColumnName="Attachment1_Name" />
+          <ScalarProperty Name="Attachment1_Path" ColumnName="Attachment1_Path" />
+          <ScalarProperty Name="Attachment2_Name" ColumnName="Attachment2_Name" />
+          <ScalarProperty Name="Attachment2_Path" ColumnName="Attachment2_Path" />
+          <ScalarProperty Name="Attachment3_Name" ColumnName="Attachment3_Name" />
+          <ScalarProperty Name="Attachment3_Path" ColumnName="Attachment3_Path" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_TaskPriority">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_TaskPriority">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_TaskPriority">
         <MappingFragment StoreEntitySet="Mst_TaskPriority">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
@@ -145,7 +145,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_TaskStatus">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_TaskStatus">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_TaskStatus">
         <MappingFragment StoreEntitySet="Mst_TaskStatus">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Task_Status" ColumnName="Task_Status" />
@@ -154,7 +154,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mst_TaskType">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Mst_TaskType">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Mst_TaskType">
         <MappingFragment StoreEntitySet="Mst_TaskType">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Type" ColumnName="Type" />
@@ -163,7 +163,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Trans_Ticket">
-      <EntityTypeMapping TypeName="db_Zon_TechSupportModel.Trans_Ticket">
+      <EntityTypeMapping TypeName="Db_Zon_Test_techsupportModel.Trans_Ticket">
         <MappingFragment StoreEntitySet="Trans_Ticket">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TaskID" ColumnName="TaskID" />
@@ -191,7 +191,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="AspNetUserRoles" TypeName="db_Zon_TechSupportModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="Db_Zon_Test_techsupportModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
       <EndProperty Name="AspNetRoles">
         <ScalarProperty Name="Id" ColumnName="RoleId" />
       </EndProperty>

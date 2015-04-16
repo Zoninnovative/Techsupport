@@ -21,7 +21,7 @@ namespace Ticketing_System.Repositoy
            CustomResponse objres = new CustomResponse();
            try
            {
-               using (var objcontext = new db_Zon_TechSupportEntities())
+               using (var objcontext = new Db_Zon_Test_techsupportEntities())
                {
 
                    ObjUserDashboardDTO.AssignedToMe = (from task in objcontext.Mst_Task

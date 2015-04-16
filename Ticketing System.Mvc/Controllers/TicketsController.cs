@@ -398,7 +398,7 @@ namespace Ticketing_System.Mvc.Controllers
                     List<UserDTO> usersdto1 = serializer1.Deserialize<List<UserDTO>>(referer);
                     foreach (UserDTO objuser in usersdto1)
                         ObjDllData4.Add(new SelectListItem { Text = objuser.FirstName, Value = objuser.Id.ToString() });
-                    ObjDllData4.Find(x => x.Value == _taskDTO.RefereedTo.ToString()).Selected = true;
+                    //ObjDllData4.Find(x => x.Value == _taskDTO.RefereedTo.ToString()).Selected = true;
                     objcreateTask.RefereerToDDL = ObjDllData4;
 
                 }
@@ -409,7 +409,7 @@ namespace Ticketing_System.Mvc.Controllers
                     List<TypeAndPriorityDTO> objtasktype1 = serializer1.Deserialize<List<TypeAndPriorityDTO>>(tasktype1);
                     foreach (TypeAndPriorityDTO objtp in objtasktype1)
                         ObjDllData5.Add(new SelectListItem { Text = objtp.Name, Value = objtp.ID.ToString() });
-                    ObjDllData5.Find(x => x.Value == _taskDTO.Task_Status.ToString()).Selected = true;
+                    //ObjDllData5.Find(x => x.Value == _taskDTO.Task_Status.ToString()).Selected = true;
                     objcreateTask.TaskStatusDDl = ObjDllData5;
 
                 }

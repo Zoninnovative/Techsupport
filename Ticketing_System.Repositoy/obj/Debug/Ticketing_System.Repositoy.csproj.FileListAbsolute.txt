@@ -78,7 +78,6 @@ G:\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.p
 G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
 G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb
 G:\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll.config
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Repositoy.pdb
@@ -101,7 +100,7 @@ C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\b
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Microsoft.Owin.Security.OAuth.xml
-C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\bin\Debug\Ticketing_System.Core.pdb
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.pdb
+C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing_System.Repositoy\obj\Debug\Ticketing_System.Repositoy.csprojResolveAssemblyReference.cache

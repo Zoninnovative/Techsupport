@@ -31,6 +31,7 @@ namespace Ticketing_System.Mvc.Controllers
         
         }
 
+        
         //reset password api
         [HttpPut]
         public dynamic Put(ChangePasswordDTO objresetpassword)
@@ -99,6 +100,39 @@ namespace Ticketing_System.Mvc.Controllers
                     {
                         objres.Status = CustomResponseStatus.UnSuccessful;
                         objres.Message = "Failed to update Password";
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    objres.Status = CustomResponseStatus.Successful;
+                    objres.Message = ex.Message;
+                    objres.Response = null;
+                }
+
+                return objres;
+            }
+            else if (objresetpassword.ChageType == 3)
+            {
+
+                try
+                {
+                    MyIdentityUser objuser = userManager.FindByEmail(objresetpassword.Email);
+                    objuser.FirstName = objresetpassword.FirstName;
+                    objuser.LastName = objresetpassword.LastName;
+                    objuser.MobileNumber = objresetpassword.MobileNumber;
+                    IdentityResult objidentityresult=   userManager.Update(objuser);
+                    objres.Response = null;
+
+                    if (objidentityresult.Succeeded)
+                    {
+                        objres.Status = CustomResponseStatus.Successful;
+                        objres.Message = "User Updated Successfully";
+                    }
+                    else
+                    {
+                        objres.Status = CustomResponseStatus.UnSuccessful;
+                        objres.Message = "Failed to update User Details";
                     }
                 }
                 catch (Exception ex)
@@ -220,5 +254,7 @@ namespace Ticketing_System.Mvc.Controllers
             return UserRepository.Delete(userid);
         
         }
+        
+
     }
 }

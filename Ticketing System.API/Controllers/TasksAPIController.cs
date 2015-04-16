@@ -97,7 +97,7 @@ namespace Ticketing_System.API.Controllers
                 StringBuilder sb = new StringBuilder();
                 sb.Append("<table>");
                 sb.Append("<tr><td><center><b>  Updated Ticket Infromation</b></center> <td></tr>");
-                sb.Append("<tr><td><center> Project Name </center> <td> <td><center>" + objtaskdto.ProjectName + "  </center> <td></tr>");
+                sb.Append("<tr><td><center> Project Name </center> <td> <td><center>" + objtaskdto.ProjectID + "  </center> <td></tr>");
                 sb.Append("<tr><td><center> Ticket ID </center> <td> <td><center>" + objtaskdto.ID + "  </center> <td></tr>");
                 sb.Append("<tr><td><center> Ticket Titile  </center> <td> <td><center>" + objtaskdto.Title  + "  </center> <td></tr>");
                 sb.Append("<tr><td><center> Ticket Description </center> <td> <td><center>" + objtaskdto.Description  + "  </center> <td></tr>");

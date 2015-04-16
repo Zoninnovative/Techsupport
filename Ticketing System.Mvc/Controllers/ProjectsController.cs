@@ -18,7 +18,7 @@ namespace Ticketing_System.Mvc.Controllers
         // GET: Projects
         public ActionResult ListAll()
         {
-            CustomResponse res = APICalls.Get("projectsapi/Get?projectid=0&userid="+User.Identity.GetUserId());
+            CustomResponse res = APICalls.Get("projectsapi/Get?projectid=0&userid=" + User.Identity.GetUserId());
             if (res.Response != null)
             {
                 JavaScriptSerializer serializer1 = new JavaScriptSerializer();
@@ -30,15 +30,15 @@ namespace Ticketing_System.Mvc.Controllers
             return View();
         }
 
-          [NonAction]
+        [NonAction]
         private CreateProjectModel FillCreateProjectModel()
         {
-            
+
             CreateProjectModel objCreateNewModel = new CreateProjectModel();
             List<SelectListItem> objclients = new List<SelectListItem>();
             List<SelectListItem> objusers = new List<SelectListItem>();
 
-            CustomResponse res = APICalls.Get("usersapi/Get?type=2");
+            CustomResponse res = APICalls.Get("usersapi/Get?type=4");
             if (res.Response != null)
             {
                 JavaScriptSerializer serializer1 = new JavaScriptSerializer();
@@ -53,7 +53,7 @@ namespace Ticketing_System.Mvc.Controllers
                 CustomResponse res1 = APICalls.Get("usersapi/Get?type=0");
                 uinfo = res1.Response.ToString();
                 userinfo = serializer1.Deserialize<List<UserDTO>>(uinfo);
-                objusers.Add(new SelectListItem { Text = "Select Project Manager", Value = "" });
+                //objusers.Add(new SelectListItem { Text = "Select Project Manager", Value = "" });
                 foreach (UserDTO udto in userinfo)
                     objusers.Add(new SelectListItem { Text = udto.FirstName, Value = udto.Id });
                 objCreateNewModel.UsersList = objusers;
@@ -62,56 +62,56 @@ namespace Ticketing_System.Mvc.Controllers
             else
                 return null;
         }
-        [Authorize(Roles="Administrator")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
 
             if (TempData["Message"] != null)
                 ViewBag.Message = TempData["Message"].ToString();
-          
+
             return View(FillCreateProjectModel());
         }
 
         [Authorize(Roles = "Administrator,Developer")]
         [HttpPost]
         public ActionResult Create(CreateProjectModel objcreateproject)
-            {
+        {
 
-                //if (ModelState.IsValid)
-                //{
-                    CreateProjectDTO objcreate = new CreateProjectDTO();
-                    List<string> Developesassigned = new List<string>();
-                    if (objcreateproject.UserIds.Trim().Length > 1)
-                        Developesassigned = objcreateproject.UserIds.Split('#').ToList();
-                    ProjectDTO obj = new ProjectDTO { Name = objcreateproject.Name, Description = objcreateproject.Description, Duration = objcreateproject.Duration, ClientID = objcreateproject.ClientID, PManagerID = objcreateproject.PManagerID, ProposedEndDate = objcreateproject.ProposedEndDate, ShortName = objcreateproject.ShortName, SignUpDate = objcreateproject.SignUpDate, StartDate = objcreateproject.StartDate };
-                    obj.CreatedBy = User.Identity.GetUserId();
-                    objcreate.objProject = obj;
-                    objcreate.Users = Developesassigned;
-                    CustomResponse res = APICalls.Post("projectsapi/post", objcreate);
-                    if (res.Response != null)
-                    {
-                        return RedirectToRoute("ProjectHomeRoute");
-                    }
-                    else
-                    {
-                        TempData["Message"] = "Failed to Add Project.";
-                        return RedirectToAction("Create");
-                    }
-                //}
-                //else
-                //{
-                //    return View(FillCreateProjectModel());
-                //}
+            //if (ModelState.IsValid)
+            //{
+            CreateProjectDTO objcreate = new CreateProjectDTO();
+            List<string> Developesassigned = new List<string>();
+            if (objcreateproject.UserIds.Trim().Length > 1)
+                Developesassigned = objcreateproject.UserIds.Split('#').ToList();
+            ProjectDTO obj = new ProjectDTO { Name = objcreateproject.Name, Description = objcreateproject.Description, Duration = objcreateproject.Duration, ClientID = objcreateproject.ClientID, PManagerID = objcreateproject.PManagerID, ProposedEndDate = objcreateproject.ProposedEndDate, ShortName = objcreateproject.ShortName, SignUpDate = objcreateproject.SignUpDate, StartDate = objcreateproject.StartDate };
+            obj.CreatedBy = User.Identity.GetUserId();
+            objcreate.objProject = obj;
+            objcreate.Users = Developesassigned;
+            CustomResponse res = APICalls.Post("projectsapi/post", objcreate);
+            if (res.Response != null)
+            {
+                return RedirectToRoute("ProjectHomeRoute");
+            }
+            else
+            {
+                TempData["Message"] = "Failed to Add Project.";
+                return RedirectToAction("Create");
+            }
+            //}
+            //else
+            //{
+            //    return View(FillCreateProjectModel());
+            //}
 
         }
 
 
-         
+
 
         [HttpGet]
         public ActionResult Edit(int projectid)
         {
-         
+
 
             if (TempData["Message"] != null)
                 ViewBag.Message = TempData["Message"].ToString();
@@ -122,7 +122,7 @@ namespace Ticketing_System.Mvc.Controllers
 
 
             //get project details 
-            CustomResponse objticketreponse = APICalls.Get("projectsapi/Get?userid=" + User.Identity.GetUserId() + "&projectid="+projectid);
+            CustomResponse objticketreponse = APICalls.Get("projectsapi/Get?userid=" + User.Identity.GetUserId() + "&projectid=" + projectid);
             CreateProjectDTO objprojectdetails = new CreateProjectDTO();
             ProjectDTO _projectDTO = new ProjectDTO();
             if (objticketreponse.Response != null)
@@ -146,7 +146,7 @@ namespace Ticketing_System.Mvc.Controllers
             }
 
 
-            CustomResponse res = APICalls.Get("usersapi/Get?type=2");
+            CustomResponse res = APICalls.Get("usersapi/Get?type=4");
             if (res.Response != null)
             {
                 JavaScriptSerializer serializer1 = new JavaScriptSerializer();
@@ -158,7 +158,7 @@ namespace Ticketing_System.Mvc.Controllers
                 {
                     objclients.Add(new SelectListItem { Text = udto.Email, Value = udto.Id });
                     objPms.Add(new SelectListItem { Text = udto.Email, Value = udto.Id });
-                    
+
                 }
                 objclients.Find(x => x.Value == _projectDTO.ClientID).Selected = true;
                 objEditProjectModel.ClientsDDl = objclients;
@@ -174,9 +174,17 @@ namespace Ticketing_System.Mvc.Controllers
                 }
                 foreach (string user in _projectDTO.ProjectUsers)
                 {
-                    objusers.Find(x => x.Value == user).Selected = true;
+                    //objusers.Add(new SelectListItem { Text = udto.Email, Value = udto.Id });
+                    foreach (SelectListItem y in objusers)
+                    {
+                        if (y.Value == user)
+                        {
+                            objusers.Find(x => x.Value == user).Selected = true;
+                        }
+                    }
                     objEditProjectModel.UserIds = objEditProjectModel.UserIds + '#' + user;
                 }
+
                 objEditProjectModel.UserIds.Trim('#');
                 objEditProjectModel.UsersList = objusers;
                 return View(objEditProjectModel);
@@ -189,11 +197,11 @@ namespace Ticketing_System.Mvc.Controllers
         {
             CreateProjectDTO objcreate = new CreateProjectDTO();
             List<string> Developesassigned = new List<string>();
-            
+
             if (objcreateproject.UserIds.Trim().Length > 1)
-            Developesassigned = objcreateproject.UserIds.Split('#').ToList();
+                Developesassigned = objcreateproject.UserIds.Split('#').ToList();
             string updatedby = User.Identity.GetUserId();
-            ProjectDTO obj = new ProjectDTO {ID=objcreateproject.ID,UpdatedBy=updatedby ,Name = objcreateproject.Name, Description = objcreateproject.Description, Duration = objcreateproject.Duration, ClientID = objcreateproject.ClientID, PManagerID = objcreateproject.PManagerID, ProposedEndDate = objcreateproject.ProposedEndDate, ShortName = objcreateproject.ShortName, SignUpDate = objcreateproject.SignUpDate, StartDate = objcreateproject.StartDate };
+            ProjectDTO obj = new ProjectDTO { ID = objcreateproject.ID, UpdatedBy = updatedby, Name = objcreateproject.Name, Description = objcreateproject.Description, Duration = objcreateproject.Duration, ClientID = objcreateproject.ClientID, PManagerID = objcreateproject.PManagerID, ProposedEndDate = objcreateproject.ProposedEndDate, ShortName = objcreateproject.ShortName, SignUpDate = objcreateproject.SignUpDate, StartDate = objcreateproject.StartDate };
             obj.CreatedBy = User.Identity.GetUserId();
             objcreate.objProject = obj;
             objcreate.Users = Developesassigned.Where(s => !string.IsNullOrWhiteSpace(s)).Distinct().ToList();

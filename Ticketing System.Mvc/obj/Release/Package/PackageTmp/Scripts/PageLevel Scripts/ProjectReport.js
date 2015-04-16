@@ -2,14 +2,11 @@
 
 $(document).ready(function () {
 
-    $('#dataTables-example').DataTable({
-        responsive: true,
-        "lengthMenu": [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, "All"]]
-    });
-
     $('#FromDate,#ToDate').datepicker({
         format: "mm/dd/yyyy"
     });
+
+    
 
     $('#btndownloadreport').bind('click', function (e) {
         $('#dataTables-example').tableExport({ type: 'pdf', escape: 'false', ignoreColumn: [], });
@@ -43,7 +40,7 @@ $(document).ready(function () {
 
     $('#btnemailreport').click(function () {
         //generate report and send it to user
-
+        debugger;
         $.ajax({
             url: "../ProjectReport/GenerateReportEmail?ProjectID=" + $('#ProjectID').val() + "&FromDate=" + $('#FromDate').val() + "&ToDate=" + $('#ToDate').val() + "&TaskType=" + $('#TaskTypeID').val() + "&TaskStatus=" + $('#TaskStatusID').val(),
             success: function (data) {
@@ -53,7 +50,10 @@ $(document).ready(function () {
     });
      
     
-    
+    $('#dataTables-example').DataTable({
+        responsive: true,
+        "lengthMenu": [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, "All"]]
+    });
     
     
 });
