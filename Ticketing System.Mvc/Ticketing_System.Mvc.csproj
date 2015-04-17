@@ -638,6 +638,7 @@
     <Content Include="bower_components\raphael\license.txt" />
     <Content Include="bower_components\raphael\raphael-min.js" />
     <Content Include="bower_components\raphael\raphael.js" />
+    <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\Custom.css" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\html2canvas.js" />
@@ -647,6 +648,8 @@
     <Content Include="Content\jspdf\jspdf.js" />
     <Content Include="Content\jspdf\libs\base64.js" />
     <Content Include="Content\jspdf\libs\sprintf.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.autocomplete.multiselect.js" />
     <Content Include="Content\tableExport.js" />
     <Content Include="dist\css\sb-admin-2.css" />
     <Content Include="dist\css\timeline.css" />

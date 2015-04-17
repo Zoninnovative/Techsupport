@@ -112,11 +112,92 @@
                             <label class="control-label col-md-3">Users List</label>
                             @*@Html.LabelFor(model => model.UsersList, htmlAttributes: new { @class = "control-label col-md-3" })*@
                             <div class="col-md-9">
+                                <input id="myAutocomplete" type="text" />
+                                <input id="myAutocompleteValues" type="text" />
                                 @foreach (SelectListItem si in Model.UsersList)
                                 {
                                     @Html.CheckBox(@si.Text, false, new { userid = @si.Value })@si.Text<br />
                                 }
                             </div>
+                            <script src="/Content/js/jquery-ui.min.js"></script>
+                            <script src="/Content/js/jquery.autocomplete.multiselect.js"></script> 
+                            <link rel="stylesheet" type="text/css" href="/Content/css/jquery-ui.css" />
+                            <script>
+                                $(function () {
+                                    var users = @Html.Raw(Json.Encode(Model.UsersList))
+                                    var availableTags = new Array();
+                                    $.each(users, function (idx, ele) {
+                                        var autoV = { key: ele.Value, value: ele.Text }
+                                        availableTags[idx] = autoV;
+                                    });
+                                    function split(val) {
+                                        return val.split(/,\s*/);
+                                    }
+                                    function extractLast(term) {
+                                        return split(term).pop();
+                                    }
+                                    var selectedItems= [];
+                                    $('#myAutocomplete').bind("blur", function(event) {
+                                        //var $autoCompleteInstance = $(this).autocomplete("instance");
+                                        var selectedObjects = [], currentText = $(this).html();
+                                        //if ($autoCompleteInstance.term !== undefined && $autoCompleteInstance.term !== "") {
+                                        if (currentText !== undefined && currentText !== "") {
+                                            $.each(currentText.split(","), function(index, currentValue) {
+                                                var temp = $.grep(sourceList, function(current) {
+                                                    return current.name === currentValue.trim();
+                                                });
+                                                $.merge(selectedObjects, temp);
+                                            });
+                                            selectedItems = selectedObjects;
+                                            var valueField = [], textField = [];
+                                            $.each(selectedItems, function(i, e) { valueField.push(e.valueField) }); //Resource_Id
+                                            $.each(selectedItems, function(i, e) { textField.push(e.textField) });
+                                            this.value = valueField.join(", ");
+                                            $(this).attr("value", valueField.join(", "));
+                                            this.innerHTML = textField.length > 0 ? textField.join(", ") + ", " : "";
+                                            alert(selectedItems);
+                                        }
+                                        else {
+                                            this.innerHTML = this.value = ""; $(this).attr("value", "");
+                                            selectedItems = [];
+                                        }
+                                    }).autocomplete({
+                                        multiselect: true,
+                                        minLength: 0,
+                                        source: function( request, response ) {
+                                            // delegate back to autocomplete, but extract the last term
+                                            response( $.ui.autocomplete.filter(
+                                                availableTags, extractLast( request.term ) ) );
+                                        },
+                                        focus: function () {
+                                            // prevent value inserted on focus
+                                            return false;
+                                        },
+                                        select: function (event, ui) {
+                                            var terms = split(this.value);
+                                            // remove the current input
+                                            terms.pop();
+                                            // add the selected item
+                                            terms.push(ui.item.value);
+                                            // add placeholder to get the comma-and-space at the end
+                                            terms.push("");
+                                            this.value = terms.join(", ");
+                                            
+                                            
+                                            var values = split($('#myAutocompleteValues').val());
+                                            // remove the current input
+                                            values.pop();
+                                            // add the selected item
+                                            values.push(ui.item.key);
+                                            // add placeholder to get the comma-and-space at the end
+                                            values.push("");
+                                            $('#myAutocompleteValues').val(values.join(", "));
+                                            $('#myAutocomplete').focus();
+                                            return false;
+                                        }
+                                    });
+                                })
+                            </script>
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-3 col-md-9">

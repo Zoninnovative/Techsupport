@@ -28,6 +28,23 @@ namespace Ticketing_System.Mvc
                 return null;
         }
 
+        public static dynamic GetUserRoleByID(string userid)
+        {
+
+
+            MyIdentityDbContext db = new MyIdentityDbContext();
+            UserStore<MyIdentityUser> userStore = new UserStore<MyIdentityUser>(db);
+            userManager = new UserManager<MyIdentityUser>(userStore);
+            RoleStore<MyIdentityRole> roleStore = new RoleStore<MyIdentityRole>(db);
+            roleManager = new RoleManager<MyIdentityRole>(roleStore);
+            List<string> roles=  userManager.GetRoles(userid).ToList();
+            
+            if (roles.Count > 0)
+                return roles[0];
+            else
+                return null;
+        }
+
 
         public static string GetTaskStatus(int data)
         {

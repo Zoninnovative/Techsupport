@@ -56,7 +56,8 @@
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <label class="control-label col-md-3">Duration (in&nbsp;days)</label>
+                            @*@Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-3" })*@
                             <div class="col-md-9">
                                 @Html.TextBoxFor(model => model.Duration, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
