@@ -350,3 +350,74 @@ C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\bin\Mic
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.dll
 C:\Users\ZIIS6017\Desktop\Provider\Ticketing System\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll.config
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing System.Mvc.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing System.Mvc.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Antlr3.Runtime.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\CsQuery.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\EntityFramework.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\EntityFramework.SqlServer.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Newtonsoft.Json.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Owin.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Net.Http.Formatting.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Helpers.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.WebHost.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Mvc.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Optimization.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Razor.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing System.API.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing_System.Core.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\WebGrease.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.Owin.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\CsQuery.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Newtonsoft.Json.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Net.Http.Formatting.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Helpers.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.WebHost.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Mvc.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Razor.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Optimization.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing System.API.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing_System.Core.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Ticketing_System.Repositoy.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Antlr3.Runtime.pdb
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\EntityFramework.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\EntityFramework.SqlServer.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\bin\System.Web.Http.Owin.xml
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\obj\Debug\Ticketing_System.Mvc.csprojResolveAssemblyReference.cache
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.dll
+C:\Users\ZIIS6017\Documents\Techsupport_16_04_2015\Ticketing System.Mvc\obj\Debug\Ticketing System.Mvc.pdb
